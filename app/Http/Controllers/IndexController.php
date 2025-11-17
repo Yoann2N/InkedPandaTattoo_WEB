@@ -10,7 +10,8 @@ class IndexController extends Controller
 {
     public function index(): View
     {
-        return view('index');
+        $artistes = Artiste::all();
+        return view('index', compact('artistes'));
     }
 
     public function artiste(string $pseudo): View

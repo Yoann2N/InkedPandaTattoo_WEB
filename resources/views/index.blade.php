@@ -21,6 +21,63 @@
         </div>
     </section>
 
+
+    <section class="gallery-section">
+        <div class="gallery-content">
+            <div class="gallery-grid">
+                @foreach ($artistes as $artiste)
+                <div class="grid-img-placeholder small">
+                    <figure>
+                        {{-- <img src="{{ asset('storage/' . $artiste->image) }}" alt="Tattoo 1"> --}}
+                        <img src="https://placehold.co/600x400?text=Image" alt="Tattoo 1">
+                        <legend><h3>{{ $artiste->pseudo }}</h3><p>{{ $artiste->profession }}</p></legend>
+                    </figure>
+                </div>
+                @endforeach
+                
+                {{-- <div class="grid-img-placeholder small">
+                    <figure>
+                        <img src="https://placehold.co/600x400?text=Image" alt="Tattoo 1">
+                        <legend><h3>Tatoueur</h3><p>Ligne 2</p></legend>
+                    </figure>
+                </div>
+                <div class="grid-img-placeholder small">
+                    <figure>
+                        <img src="https://placehold.co/600x400?text=Image" alt="Tattoo 1">
+                        <legend><h3>Tatoueur</h3><p>Ligne 2</p></legend>
+                    </figure>
+                </div>
+                <div class="grid-img-placeholder small">
+                    <figure>
+                        <img src="https://placehold.co/600x400?text=Image" alt="Tattoo 1">
+                        <legend><h3>Tatoueur</h3><p>Ligne 2</p></legend>
+                    </figure>
+                </div>
+                <div class="grid-img-placeholder small">
+                    <figure>
+                        <img src="https://placehold.co/600x400?text=Image" alt="Tattoo 1">
+                        <legend><h3>Tatoueur</h3><p>Ligne 2</p></legend>
+                    </figure>
+                </div>
+                <div class="grid-img-placeholder small">
+                    <figure>
+                        <img src="https://placehold.co/600x400?text=Image" alt="Tattoo 1">
+                        <legend><h3>Tatoueur</h3><p>Ligne 2</p></legend>
+                    </figure>
+                </div>
+                <div class="grid-img-placeholder small">
+                    <figure>
+                        <img src="https://placehold.co/600x400?text=Image" alt="Tattoo 1">
+                        <legend><h3>Tatoueur</h3><p>Ligne 2</p></legend>
+                    </figure>
+                </div> --}}
+
+            </div>
+        </div>
+    </section>
+
+
+
     <section class="about-section">
         <div class="about-header">
             <p class="est-year">EST 1990</p>

@@ -218,6 +218,27 @@ ul {
     color: var(--color-text);
 }
 
+/* --- SECTION Gallerie --- */
+.gallery-section {
+    padding: 80px 0;
+    /* margin-top: -100px; */
+}
+
+.gallery-content {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.gallery-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
 /* --- SECTION 3: ABOUT --- */
 .about-section {
     padding: 80px 0;
@@ -266,7 +287,7 @@ ul {
     background-position: center;
     background-size: cover;
     min-height: 100px;
-    background-image: url('https://via.placeholder.com/280x200?text=Image');
+    background-image: url('https://placehold.co/280x200?text=Image');
 }
 
 /* Mise en page de la grille pour le desktop */
@@ -384,6 +405,11 @@ ul {
         border-right: none;
     }
 
+    /* --- GALLERY SECTION --- */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     /* --- ABOUT SECTION --- */
     .about-content {
         width: 90%;
@@ -404,16 +430,6 @@ ul {
     .hero-section {
         min-height: 550px;
     }
-
-    /* .navbar {
-        padding: 15px 20px;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .nav-links {
-        display: none; 
-    } */
 
     .hero-content h1 {
         font-size: 30px;
@@ -452,6 +468,12 @@ ul {
     .feature-box:last-child {
         border-bottom: none;
     }
+
+    /* --- GALLERY SECTION --- */
+    .gallery-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
 
     /* --- ABOUT SECTION --- */
     .about-section {
