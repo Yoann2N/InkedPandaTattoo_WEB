@@ -23,17 +23,7 @@
 
 
         <header class="hero-section">
-        <nav class="navbar">
-            <div class="logo">Inked Panda Tattoo</div>
-            <ul class="nav-links">
-                <li><a href="#" class="active">HOME</a></li>
-                <li><a href="artiste/emile95">artiste 1</a></li>
-                <li><a href="#">SERVICES</a></li>
-                <li><a href="#">PAGES</a></li>
-                <li><a href="#">GALLERY</a></li>
-                <li><a href="#">CONTACT US</a></li>
-            </ul>
-        </nav>
+
 
         <div class="hero-content">
             <p class="welcome">WELCOME TO</p>

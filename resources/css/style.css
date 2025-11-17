@@ -324,6 +324,19 @@ ul {
 /* ======================================= */
 
 /* --- TABLETTES ET PETITS ORDINATEURS (Max 1024px) --- */
+@media (max-width: 1280px) {
+
+    .navbar {
+        padding: 15px 20px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: none; /* prévu pour un futur menu burger */
+    }
+}
+
 @media (max-width: 1024px) {
 
     /* --- HERO --- */
@@ -331,9 +344,19 @@ ul {
         padding: 20px 40px;
     }
 
-    .nav-links {
+    /* .nav-links {
         gap: 20px;
         font-size: 12px;
+    } */
+
+    .navbar {
+        padding: 15px 20px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: none; /* prévu pour un futur menu burger */
     }
 
     .hero-content h1 {
@@ -382,15 +405,15 @@ ul {
         min-height: 550px;
     }
 
-    .navbar {
+    /* .navbar {
         padding: 15px 20px;
         flex-direction: row;
         justify-content: space-between;
     }
 
     .nav-links {
-        display: none; /* prévu pour un futur menu burger */
-    }
+        display: none; 
+    } */
 
     .hero-content h1 {
         font-size: 30px;

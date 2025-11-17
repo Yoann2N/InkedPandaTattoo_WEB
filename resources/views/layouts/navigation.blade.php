@@ -26,11 +26,18 @@
                 <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                     {{ __('Artiste 4') }}
                 </x-nav-link>
+                <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    {{ __('Artiste 5') }}
+                </x-nav-link>
+                <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    {{ __('Artiste 6') }}
+                </x-nav-link>
             </div>
         </div>
 
         <!-- Hamburger -->
-        <div class="-me-2 flex items-center sm:hidden">
+        {{-- <div class="-me-2 flex items-center sm:hidden"> --}}
+        <div class="-me-2 flex items-center xl:hidden">
             <button
                 @click="open = ! open"
                 class="hamburger-btn inline-flex items-center justify-center p-2 rounded-md focus:outline-none transition duration-150 ease-in-out"
@@ -50,23 +57,29 @@
     </div>
 
     <!-- Responsive Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden mobile-menu">
+    <div :class="{'block': open, 'hidden': ! open}" class="hidden xl:hidden mobile-menu">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Accueil') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="url('artiste/artiste1')" :active="request()->routeIs('artiste.artiste1')">
+            <x-responsive-nav-link :href="url('artiste/artiste1')" :active="request()->routeIs('dashboard')">
                 {{ __('Artiste 1') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="url('artiste/artiste2')" :active="request()->routeIs('artiste.artiste2')">
+            <x-responsive-nav-link :href="url('artiste/artiste2')" :active="request()->routeIs('dashboard')">
                 {{ __('Artiste 2') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+            <x-responsive-nav-link :href="url('artiste/artiste3')" :active="request()->routeIs('dashboard')">
                 {{ __('Artiste 3') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+            <x-responsive-nav-link :href="url('artiste/artiste4')" :active="request()->routeIs('dashboard')">
                 {{ __('Artiste 4') }}
             </x-responsive-nav-link>
+            <x-responsive-nav-link :href="url('artiste/artiste5')" :active="request()->routeIs('dashboard')">
+                {{ __('Artiste 5') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="url('artiste/artiste6')" :active="request()->routeIs('artiste.artiste6')">
+                {{ __('Artiste 6') }}
+            </x-responsive-nav-link>            
         </div>
 
         <!-- Responsive Settings Options -->
