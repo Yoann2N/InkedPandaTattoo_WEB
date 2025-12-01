@@ -102,4 +102,73 @@
             </div>
         </div>
     </section>
+
+    <section class="products-section">
+        <div class="products-header">
+            <h2>Nos Produits</h2>
+        </div>
+
+        <div class="products-gallery">
+
+            <div class="product-placeholder"
+                style="background-image: url('https://via.placeholder.com/400x300?text=Produit+1');"></div>
+
+            <div class="product-placeholder"
+                style="background-image: url('https://via.placeholder.com/400x600?text=Produit+2');"></div>
+
+            <div class="product-placeholder"
+                style="background-image: url('https://via.placeholder.com/400x300?text=Produit+3');"></div>
+
+            <div class="product-placeholder"></div>
+
+        </div>
+    </section>
+    <section class="contact-section">
+        <div class="contact-container">
+
+            <!-- COLONNE GAUCHE -->
+            <div class="contact-left">
+
+                <h3 class="contact-title">EMPLACEMENT</h3>
+
+                <p class="contact-address">
+                    28 Jackson Blvd Ste 1020 Chicago<br>
+                    IL 60604-2340
+                </p>
+
+                <h3 class="contact-title">SUIVEZ NOUS</h3>
+
+                <div class="contact-socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-google-plus"></i></a>
+                </div>
+
+                <p class="contact-footer">© 2025 Politique de confidentialité</p>
+
+            </div>
+
+            <!-- COLONNE CENTRALE (BANDE JAUNE) -->
+            <div class="contact-divider"></div>
+
+            <!-- COLONNE DROITE (FORMULAIRE) -->
+            <div class="contact-right">
+
+                <h3 class="contact-title">FORMULAIRE DE CONTACT</h3>
+
+                <form class="contact-form">
+
+                    <input type="text" placeholder="Enter your Name">
+                    <input type="email" placeholder="Enter a valid email address">
+                    <textarea placeholder="Enter your message"></textarea>
+
+                    <button type="submit" class="contact-btn">Soumettre</button>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
 </x-guest-layout>
