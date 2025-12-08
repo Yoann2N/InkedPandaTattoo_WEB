@@ -1,3 +1,8 @@
+@php
+    
+    $artistes = \App\Models\Artiste::limit(6)->get();
+@endphp
+
 <nav x-data="{ open: false }" class="main-nav">
     <!-- Primary Navigation Menu -->
     <div class="navbar">
@@ -11,32 +16,24 @@
 
             <!-- Navigation Links (desktop) -->
             <div class="hidden sm:flex sm:ms-10 nav-links">
+                {{-- Accueil --}}
                 <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                     {{ __('Accueil') }}
                 </x-nav-link>
-                <x-nav-link :href="url('artiste/artiste1')" :active="request()->routeIs('artiste.artiste1')">
-                    {{ __('Artiste 1') }}
-                </x-nav-link>
-                <x-nav-link :href="url('artiste/artiste2')" :active="request()->routeIs('artiste.artiste2')">
-                    {{ __('Artiste 2') }}
-                </x-nav-link>
-                <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                    {{ __('Artiste 3') }}
-                </x-nav-link>
-                <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                    {{ __('Artiste 4') }}
-                </x-nav-link>
-                <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                    {{ __('Artiste 5') }}
-                </x-nav-link>
-                <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                    {{ __('Artiste 6') }}
-                </x-nav-link>
+
+                {{-- Liens artistes dynamiques (desktop) --}}
+                @foreach ($artistes as $artiste)
+                    <x-nav-link
+                        :href="url('/artiste/' . $artiste->pseudo)"
+                        :active="request()->is('artiste/' . $artiste->pseudo)"
+                    >
+                        {{ $artiste->pseudo }}
+                    </x-nav-link>
+                @endforeach
             </div>
         </div>
 
         <!-- Hamburger -->
-        {{-- <div class="-me-2 flex items-center sm:hidden"> --}}
         <div class="-me-2 flex items-center xl:hidden">
             <button
                 @click="open = ! open"
@@ -59,27 +56,21 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden xl:hidden mobile-menu">
         <div class="pt-2 pb-3 space-y-1">
+
+            {{-- Accueil (mobile) --}}
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Accueil') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="url('artiste/artiste1')" :active="request()->routeIs('dashboard')">
-                {{ __('Artiste 1') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="url('artiste/artiste2')" :active="request()->routeIs('dashboard')">
-                {{ __('Artiste 2') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="url('artiste/artiste3')" :active="request()->routeIs('dashboard')">
-                {{ __('Artiste 3') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="url('artiste/artiste4')" :active="request()->routeIs('dashboard')">
-                {{ __('Artiste 4') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="url('artiste/artiste5')" :active="request()->routeIs('dashboard')">
-                {{ __('Artiste 5') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="url('artiste/artiste6')" :active="request()->routeIs('artiste.artiste6')">
-                {{ __('Artiste 6') }}
-            </x-responsive-nav-link>            
+
+            {{-- Liens artistes dynamiques (mobile) --}}
+            @foreach ($artistes as $artiste)
+                <x-responsive-nav-link
+                    :href="url('/artiste/' . $artiste->pseudo)"
+                    :active="request()->is('artiste/' . $artiste->pseudo)"
+                >
+                    {{ $artiste->pseudo }}
+                </x-responsive-nav-link>
+            @endforeach
         </div>
 
         <!-- Responsive Settings Options -->
