@@ -17,6 +17,7 @@ class IndexController extends Controller
     public function artiste(string $pseudo): View
     {
         $artiste = Artiste::where('pseudo', $pseudo)->firstOrFail();
-        return view('artiste', compact('artiste'));
+        $artistes = Artiste::limit(6)->get();
+        return view('artiste', compact('artiste','artistes'));
     }
 }
