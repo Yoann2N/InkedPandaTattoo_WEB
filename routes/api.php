@@ -10,4 +10,4 @@ Route::get('/user', function (Request $request) {
 
 
 
-Route::apiResource('posts', ArtisteController::class);
+Route::apiResource('artistes', ArtisteController::class);
