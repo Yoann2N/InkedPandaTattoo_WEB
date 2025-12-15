@@ -13,7 +13,7 @@ class ArtisteController extends Controller
      */
     public function index()
     {
-        $artistes = Artiste::all();
+        $artistes = Artiste::with('realisations')->get();
         return response()->json($artistes);
     }
 

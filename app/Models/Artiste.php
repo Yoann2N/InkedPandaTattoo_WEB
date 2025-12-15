@@ -23,4 +23,9 @@ class Artiste extends Model
         'vignetteUrl',
         'css',
     ];
+
+    public function realisations()
+    {
+        return $this->hasMany(Realisation::class);
+    }
 }
