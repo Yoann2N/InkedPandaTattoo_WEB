@@ -58,11 +58,11 @@
 
         <div class="about-content">
             <div class="about-gallery">
-                <div class="img-placeholder wide"></div>
-                <div class="img-placeholder tall"></div>
-                <div class="img-placeholder small"></div>
-                <div class="img-placeholder small"></div>
-                <div class="img-placeholder small"></div>
+                <div class="img-placeholder wide"><img src="{{ asset('storage/studio1.jpg') }}" alt="Studio 1" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                <div class="img-placeholder tall"><img src="{{ asset('storage/studio2.jpg') }}" alt="Studio 2" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                <div class="img-placeholder small"><img src="{{ asset('storage/studio3.jpg') }}" alt="Studio 3" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                <div class="img-placeholder small"><img src="{{ asset('storage/studio4.jpg') }}" alt="Studio 4" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                <!-- <div class="img-placeholder small"><img src="{{ asset('storage/studio5.jpg') }}" alt="Studio 5" style="width: 100%; height: 100%; object-fit: cover;"></div> -->
             </div>
             <div class="about-text">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -82,16 +82,17 @@
 
         <div class="products-gallery">
 
+<div class="product-placeholder"
+     style="background-image: url('{{ asset('storage/produits/produit1.jpg') }}')"></div>
             <div class="product-placeholder"
-                style="background-image: url('https://via.placeholder.com/400x300?text=Produit+1');"></div>
+                style="background-image: url('{{ asset('storage/produits/produit2.jpg') }}')"></div>
 
             <div class="product-placeholder"
-                style="background-image: url('https://via.placeholder.com/400x600?text=Produit+2');"></div>
+                style="background-image: url('{{ asset('storage/produits/produit3.jpg') }}')"></div>
 
             <div class="product-placeholder"
-                style="background-image: url('https://via.placeholder.com/400x300?text=Produit+3');"></div>
-
-            <div class="product-placeholder"></div>
+                style="background-image: url('{{ asset('storage/produits/produit4.jpg') }}')"></div>
+            
 
         </div>
     </section>
