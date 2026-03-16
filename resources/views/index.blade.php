@@ -27,11 +27,13 @@
             <div class="gallery-grid">
                 @foreach ($artistes as $artiste)
                 <div class="grid-img-placeholder small">
-                    <figure>
-                        {{-- <img src="{{ asset('storage/' . $artiste->image) }}" alt="Tattoo 1"> --}}
-                        <img src="https://placehold.co/600x400?text=Image" alt="Tattoo 1">
-                        <legend><h3>{{ $artiste->pseudo }}</h3><p>{{ $artiste->profession }}</p></legend>
-                    </figure>
+                    <a href ="{{ url('/artiste/' . $artiste->pseudo) }}">
+                        <figure>
+                            {{-- <img src="{{ asset('storage/' . $artiste->image) }}" alt="Tattoo 1"> --}}
+                            <img src="https://placehold.co/600x400?text=Image" alt="Tattoo 1">
+                            <legend><h3>{{ $artiste->pseudo }}</h3><p>{{ $artiste->profession }}</p></legend>
+                        </figure>
+                    </a>
                 </div>
                 @endforeach
                 
