@@ -35,42 +35,7 @@
                 </div>
                 @endforeach
                 
-                {{-- <div class="grid-img-placeholder small">
-                    <figure>
-                        <img src="https://placehold.co/600x400?text=Image" alt="Tattoo 1">
-                        <legend><h3>Tatoueur</h3><p>Ligne 2</p></legend>
-                    </figure>
-                </div>
-                <div class="grid-img-placeholder small">
-                    <figure>
-                        <img src="https://placehold.co/600x400?text=Image" alt="Tattoo 1">
-                        <legend><h3>Tatoueur</h3><p>Ligne 2</p></legend>
-                    </figure>
-                </div>
-                <div class="grid-img-placeholder small">
-                    <figure>
-                        <img src="https://placehold.co/600x400?text=Image" alt="Tattoo 1">
-                        <legend><h3>Tatoueur</h3><p>Ligne 2</p></legend>
-                    </figure>
-                </div>
-                <div class="grid-img-placeholder small">
-                    <figure>
-                        <img src="https://placehold.co/600x400?text=Image" alt="Tattoo 1">
-                        <legend><h3>Tatoueur</h3><p>Ligne 2</p></legend>
-                    </figure>
-                </div>
-                <div class="grid-img-placeholder small">
-                    <figure>
-                        <img src="https://placehold.co/600x400?text=Image" alt="Tattoo 1">
-                        <legend><h3>Tatoueur</h3><p>Ligne 2</p></legend>
-                    </figure>
-                </div>
-                <div class="grid-img-placeholder small">
-                    <figure>
-                        <img src="https://placehold.co/600x400?text=Image" alt="Tattoo 1">
-                        <legend><h3>Tatoueur</h3><p>Ligne 2</p></legend>
-                    </figure>
-                </div> --}}
+                
 
             </div>
         </div>
