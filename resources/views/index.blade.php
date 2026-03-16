@@ -1,8 +1,14 @@
 <x-guest-layout>
-
+    <style>
+    .hero-content {
+        background-image: url('{{ asset('storage/bannieres/banniere_studio.jpg') }}');
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    </style>
 
     <section class="features-section">
-        <div class="features-container">
+        <div class="features-container" style=>
             <div class="feature-box">
                 <i class="fas fa-crown"></i>
                 <h3>Best Tattoo in Town</h3>
@@ -29,8 +35,7 @@
                 <div class="grid-img-placeholder small">
                     <a href ="{{ url('/artiste/' . $artiste->pseudo) }}">
                         <figure>
-                            {{-- <img src="{{ asset('storage/' . $artiste->image) }}" alt="Tattoo 1"> --}}
-                            <img src="https://placehold.co/600x400?text=Image" alt="Tattoo 1">
+                            <img src="{{ asset('storage/' . $artiste->vignetteUrl) }}" alt="Tattoo 1">
                             <legend><h3>{{ $artiste->pseudo }}</h3><p>{{ $artiste->profession }}</p></legend>
                         </figure>
                     </a>
