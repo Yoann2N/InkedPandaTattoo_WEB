@@ -11,17 +11,17 @@
         <div class="features-container" style=>
             <div class="feature-box">
                 <i class="fas fa-crown"></i>
-                <h3>Best Tattoo in Town</h3>
+                <h3>Horaires</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
             </div>
             <div class="feature-box">
                 <i class="fas fa-syringe"></i>
-                <h3>Sterile Equipment</h3>
+                <h3>Adresse</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
             </div>
             <div class="feature-box">
                 <i class="fas fa-users"></i>
-                <h3>Professional Team</h3>
+                <h3>Équipe Professionnelle</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
             </div>
         </div>
