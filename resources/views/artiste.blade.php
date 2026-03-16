@@ -42,19 +42,13 @@
 
 
     <section class="gallery-section">
-        <div class="gallery-content">
-            <div class="gallery-grid">
-
-                @for ($i = 0; $i < 6; $i++)
-                    <div class="grid-img-placeholder small">
-                        <figure>
-                            <img src="https://placehold.co/600x400?text=Image" alt="">
-                        </figure>
-                    </div>
-                @endfor
-
-            </div>
-        </div>
+                <div style="position: relative; width: 100%; padding-top: 177.78%; /* Aspect ratio: 1600/900 * 100 */">
+                    <iframe 
+                        src="https://rss.app/embed/v1/imageboard/WvQISdq1zYHX8GlM" 
+                        frameborder="0" 
+                        style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; border: 0;">
+                    </iframe>
+                </div>
     </section>
 
 
