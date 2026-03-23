@@ -96,6 +96,8 @@
 
         </div>
     </section>
+
+
     <section class="contact-section">
         <div class="contact-container">
 
@@ -112,10 +114,10 @@
                 <h3 class="contact-title">SUIVEZ NOUS</h3>
 
                 <div class="contact-socials">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-google-plus"></i></a>
+                    <a href="http://facebook.com" target="_blank"><img style="width: 50px; height: 50px;" src="{{ asset('storage/reseaux/facebook.png') }}" alt="Facebook"></a>
+                    <!-- <a href="http://twitter.com" target="_blank"><img style="width: 50px; height: 50px;" src="{{ asset('storage/reseaux/twitter.png') }}" alt="Twitter"></a> -->
+                    <a href="http://instagram.com" target="_blank"><img style="width: 50px; height: 50px;" src="{{ asset('storage/reseaux/instagram.png') }}" alt="Instagram"></a>
+                    <!-- <a href="http://google.com" target="_blank"><img style="width: 50px; height: 50px;" src="{{ asset('storage/reseaux/google.png') }}" alt="Google"></a> -->
                 </div>
 
                 <p class="contact-footer">© 2025 Politique de confidentialité</p>

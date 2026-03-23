@@ -629,6 +629,10 @@ ul {
     line-height: 1.6;
     margin-bottom: 40px;
 }
+.contact-socials {
+    display: flex;
+    align-items: center;
+}
 
 .contact-socials a {
     color: white;
