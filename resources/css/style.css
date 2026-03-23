@@ -136,6 +136,7 @@ ul {
     align-items: center;
     text-align: center;
     padding-bottom: 150px;
+
 }
 
 .hero-content .welcome {
@@ -339,7 +340,18 @@ ul {
     font-style: italic;
 }
 
-
+.artist-bio {
+    padding: 20px;
+    border: 1px solid red;
+    margin-top: -30px;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: white;
+    position: relative;
+}
+.artist-links {
+    padding: 20px
+}
 /* ======================================= */
 /* 📱 MEDIA QUERIES (Responsive) */
 /* ======================================= */
