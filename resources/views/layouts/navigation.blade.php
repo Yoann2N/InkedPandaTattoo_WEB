@@ -9,7 +9,7 @@
         <div class="flex items-center">
             <!-- Logo -->
             <div class="shrink-0 flex items-center">
-                <a href="{{ route('dashboard') }}" class="logo">
+                <a href="{{ route('index') }}" class="logo">
                     Inked Panda Tattoo
                 </a>
             </div>
@@ -17,7 +17,7 @@
             <!-- Navigation Links (desktop) -->
             <div class="hidden sm:flex sm:ms-10 nav-links">
                 {{-- Accueil --}}
-                <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                <x-nav-link :href="route('index')" :active="request()->routeIs('index')">
                     {{ __('Accueil') }}
                 </x-nav-link>
 
