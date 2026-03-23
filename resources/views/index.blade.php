@@ -35,7 +35,7 @@
                 <div class="grid-img-placeholder small">
                     <a href ="{{ url('/artiste/' . $artiste->pseudo) }}">
                         <figure>
-                            <img src="{{ asset('storage/' . $artiste->vignetteUrl) }}" alt="Tattoo 1">
+                            <img src="{{ asset('storage/vignettes/' . $artiste->vignetteUrl) }}" alt="Tattoo 1">
                             <legend><h3>{{ $artiste->pseudo }}</h3><p>{{ $artiste->profession }}</p></legend>
                         </figure>
                     </a>
