@@ -35,10 +35,10 @@ class ArtisteSeeder extends Seeder
                     
                     'profession'      => 'Tatoueuse',
                     'style'    => 'Ligne fine',
-                    'pseudo'        => 'Sarah Pandragon',
+                    'pseudo'        => 'Sarah Pendragon',
                     'bio'  => 'blablabla',
                     'instagram' => 'https://www.instagram.com/sarahpendragon/',
-                    'facebook' => 'Sarah Pandragon',
+                    'facebook' => '',
                     'banniereUrl' => 'bannieres/banniere_studio.jpg',
                     'vignetteUrl' => 'vignettes/logo_tatoo2.jpg',
                     'rss' => 'https://rss.app/embed/v1/imageboard/WvQISdq1zYHX8GlM',
