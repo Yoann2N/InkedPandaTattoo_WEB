@@ -44,7 +44,7 @@
     <section class="gallery-section">
                 <div style="position: relative; width: 100%; padding-top: 177.78%; /* Aspect ratio: 1600/900 * 100 */">
                     <iframe 
-                        src="https://rss.app/embed/v1/imageboard/WvQISdq1zYHX8GlM" 
+                        src="{{ $artiste->rss }}" 
                         frameborder="0" 
                         style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; border: 0;">
                     </iframe>

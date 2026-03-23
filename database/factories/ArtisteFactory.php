@@ -29,6 +29,7 @@ class ArtisteFactory extends Factory
             'facebook' => $this->faker->url(),
             'banniereUrl' => $this->faker->imageUrl(),
             'vignetteUrl' => $this->faker->imageUrl(),
+            'rss' => "https://rss.app/embed/v1/imageboard/WvQISdq1zYHX8GlM",
             'css' => "body { background-color: #f0f0f0; }". $this->faker->safecolorName(),
                 
         ];

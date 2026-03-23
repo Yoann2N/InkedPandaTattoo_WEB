@@ -23,6 +23,7 @@ return new class extends Migration
         $table->string('facebook')->nullable();
         $table->string('banniereUrl')->nullable();
         $table->string('vignetteUrl')->nullable();
+        $table->string('rss')->nullable();
         $table->text('css')->nullable();
         $table->timestamp('created_at')->useCurrent();
         $table->timestamp('updated_at')->useCurrent()->usecurrentOnUpdate();
