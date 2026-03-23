@@ -342,7 +342,6 @@ ul {
 
 .artist-bio {
     padding: 20px;
-    border: 1px solid red;
     margin-top: -30px;
     margin-left: 10%;
     margin-right: 10%;
@@ -350,7 +349,14 @@ ul {
     position: relative;
 }
 .artist-links {
-    padding: 20px
+    padding: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: white;
+}
+.artist-links ul {
+    display: flex;
+    gap: 20px;
 }
 /* ======================================= */
 /* 📱 MEDIA QUERIES (Responsive) */
