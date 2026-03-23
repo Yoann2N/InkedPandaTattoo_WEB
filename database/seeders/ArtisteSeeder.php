@@ -18,7 +18,7 @@ class ArtisteSeeder extends Seeder
 
             $artists = [
                 [
-                    'artiste'       => 'Alexis Panda',
+                    
                     'profession'      => 'Tatoueur',
                     'style'    => 'Réaliste',
                     'pseudo'        => 'Alexis Panda',
@@ -29,10 +29,10 @@ class ArtisteSeeder extends Seeder
                     'vignetteUrl' => 'vignettes/logo_tatoo1.jpg',
                     'rss' => 'https://rss.app/embed/v1/imageboard/WvQISdq1zYHX8GlM',
                     'css' => 'body { background-color: #f0f0f0; }aqua',
-                    'user_id' => User::inRandomOrder()->value('id'),
+                    'user_id' => 1
                 ],
                 [
-                    'artiste'       => 'Sarah Pandragon',
+                    
                     'profession'      => 'Tatoueuse',
                     'style'    => 'Ligne fine',
                     'pseudo'        => 'Sarah Pandragon',
@@ -43,24 +43,24 @@ class ArtisteSeeder extends Seeder
                     'vignetteUrl' => 'vignettes/logo_tatoo2.jpg',
                     'rss' => 'https://rss.app/embed/v1/imageboard/WvQISdq1zYHX8GlM',
                     'css' => 'body { background-color: #f0f0f0; }teal',
-                    'user_id' => User::inRandomOrder()->value('id'),
+                    'user_id' => 2
                 ],
                 [
-                    'artiste'       => 'Isabelle',
+                    
                     'profession'      => 'Maquillage permanent',
                     'style'    => 'Maquillage permanent',
                     'pseudo'        => 'Isabelle',
                     'bio'  => 'blablabla',
-                    'instagram' => 'Isabelle',
-                    'facebook' => 'Isabelle',
+                    'instagram' => 'https://www.instagram.com/isabelle_studio_artist/',
+                    'facebook' => '',
                     'banniereUrl' => 'bannieres/banniere_studio.jpg',
                     'vignetteUrl' => 'vignettes/logo_tatoo3.jpg',
                     'rss' => 'https://rss.app/embed/v1/imageboard/WvQISdq1zYHX8GlM',
                     'css' => 'body { background-color: #f0f0f0; }aqua',
-                    'user_id' => User::inRandomOrder()->value('id'),
+                    'user_id' => 3
                 ],
                 [
-                    'artiste'       => 'Anatomix',
+                    
                     'profession'      => 'Perceur',
                     'style'    => '',
                     'pseudo'        => 'Anatomix',
@@ -71,10 +71,10 @@ class ArtisteSeeder extends Seeder
                     'vignetteUrl' => 'vignettes/logo_tatoo4.jpg',
                     'rss' => 'https://rss.app/embed/v1/imageboard/WvQISdq1zYHX8GlM',
                     'css' => 'body { background-color: #f0f0f0; }aqua',
-                    'user_id' => User::inRandomOrder()->value('id'),
+                    'user_id' => 4
                 ],
                 [
-                    'artiste'       => 'Alma',
+                    
                     'profession'      => 'Nailartiste',
                     'style'    => '',
                     'pseudo'        => 'Alma',
@@ -85,12 +85,12 @@ class ArtisteSeeder extends Seeder
                     'vignetteUrl' => 'vignettes/logo_tatoo5.jpg',
                     'rss' => 'https://rss.app/embed/v1/imageboard/WvQISdq1zYHX8GlM',
                     'css' => 'body { background-color: #f0f0f0; }aqua',
-                    'user_id' => User::inRandomOrder()->value('id'),
+                    'user_id' => 5
                 ],
             ];
 
             foreach ($artists as $artist) {
-                Artist::create($artist);
+                Artiste::create($artist);
             }
 
 
