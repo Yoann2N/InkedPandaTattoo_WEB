@@ -1,10 +1,17 @@
 <x-guest-layout>
+    <style>
+    .hero-content {
+        background-image: url('{{ asset('storage/bannieres/' . $artiste->banniereUrl) }}');
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    </style>
 
     
     @if ($artiste->banniereUrl)
         <div class="artist-banner">
-            <img src="{{ asset('storage/' . $artiste->banniereUrl) }}"
-                 alt="Bannière de {{ $artiste->pseudo }}">
+            <!-- <img src="{{ asset('storage/' . $artiste->banniereUrl) }}"
+                 alt="Bannière de {{ $artiste->pseudo }}"> -->
         </div>
     @else
         <div class="artist-banner">
