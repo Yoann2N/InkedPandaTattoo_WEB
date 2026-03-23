@@ -15,15 +15,15 @@ class UserSeeder extends Seeder
         {
             //Artiste::factory()->count(6)->create();
 
-            $artists = [
+            $users = [
                 [
-                    'id'       => '',
+                    
                     'name'      => 'Alexis',
                     'email'    => 'Panda.tattoo@outlook.fr',
-                    'email_verified_at'  => '',
+                   
                     'password'  => '0000',
-                    'remember_token' => '',
-                    'timestamps' => '',
+                    
+                   
                     'prenom' => 'Alexis',
                     'adresse' => 'Isle sur la sorgue',
                     'code_postal' => '84800',
@@ -31,13 +31,13 @@ class UserSeeder extends Seeder
                     'telephone' => '0627409658',
                 ],
                 [
-                    'id'       => '',
+                    
                     'name'      => 'Sarah',
                     'email'    => 'SarahPandragon@gmail.com',
-                    'email_verified_at'  => '',
+                    
                     'password'  => '0000',
-                    'remember_token' => '',
-                    'timestamps' => '',
+                    
+                    
                     'prenom' => 'Sarah',
                     'adresse' => 'Isle sur la sorgue',
                     'code_postal' => '84800',
@@ -45,13 +45,13 @@ class UserSeeder extends Seeder
                     'telephone' => '06066006060',
                 ],
                 [
-                    'id'       => '',
+                   
                     'name'      => 'Isabelle',
                     'email'    => 'isabelle@gmail.com',
-                    'email_verified_at'  => '',
+                    
                     'password'  => '0000',
-                    'remember_token' => '',
-                    'timestamps' => '',
+                   
+                    
                     'prenom' => 'Isabelle',
                     'adresse' => 'Isle sur la sorgue',
                     'code_postal' => '84800',
@@ -59,13 +59,12 @@ class UserSeeder extends Seeder
                     'telephone' => '0606060660',
                 ],
                 [
-                    'id'       => '',
+                    
                     'name'      => 'Anatomix',
                     'email'    => 'Anatomix@gmail.com',
-                    'email_verified_at'  => '',
+                    
                     'password'  => '0000',
-                    'remember_token' => '',
-                    'timestamps' => '',
+                    
                     'prenom' => 'Anatomix',
                     'adresse' => 'Isle sur la sorgue',
                     'code_postal' => '84800',
@@ -73,13 +72,12 @@ class UserSeeder extends Seeder
                     'telephone' => '0627409658',
                 ],
                 [
-                    'id'       => '',
+                    
                     'name'      => 'Samantha',
                     'email'    => 'Alma@gmail.com',
-                    'email_verified_at'  => '',
+                    
                     'password'  => '0000',
-                    'remember_token' => '',
-                    'timestamps' => '',
+                    
                     'prenom' => 'Samantha',
                     'adresse' => 'Isle sur la sorgue',
                     'code_postal' => '84800',
@@ -88,8 +86,8 @@ class UserSeeder extends Seeder
                 ],
             ];
 
-            foreach ($artists as $artist) {
-                Artist::create($artist);
+            foreach ($users as $user) {
+                User::create($user);
             }
 
 
