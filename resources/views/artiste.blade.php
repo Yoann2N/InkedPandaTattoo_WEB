@@ -13,6 +13,13 @@
         background-position: center center;
     }
     @endif
+
+    .hero-content {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;   /* ← l'image remplit tout */
+    width: 100%;
+    height: 100%; }
     </style>
 
     <div class="artist-bio">

@@ -4,6 +4,8 @@
         background-image: url('{{ asset('storage/bannieres/banniere_studio.jpg') }}');
         background-repeat: no-repeat;
         background-position: center center;
+        width: 100%;
+        height: 100%;
     }
     </style>
 
@@ -121,6 +123,9 @@
                 </div>
 
                 <p class="contact-footer">© 2025 Politique de confidentialité</p>
+                <a href="{{ route('login') }}" class="login-footer-btn">
+                {{ __('Connexion') }}
+</a>
 
             </div>
 

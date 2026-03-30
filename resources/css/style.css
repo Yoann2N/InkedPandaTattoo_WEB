@@ -42,10 +42,11 @@ ul {
     min-height: 700px;
     background: var(--color-dark);
     color: white;
-    background-image: url('placeholder-tattoo-artist.jpg');
+    /* background-image: url('placeholder-tattoo-artist.jpg'); */
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.65);
     display: flex;
     flex-direction: column;
