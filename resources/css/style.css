@@ -2,7 +2,7 @@
 :root {
     --color-dark: #111111;
     --color-text: #cccccc;
-    --color-accent: #e2a007; /* Or/Jaune */
+    --color-accent: #e2a007;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Roboto', sans-serif;
 }
@@ -18,7 +18,7 @@ body {
     color: var(--color-dark);
     line-height: 1.6;
     background-color: #f7f7f7;
-    font-size: 16px; /* Base pour le desktop */
+    font-size: 16px;
 }
 
 h1, h2, h3 {
@@ -42,33 +42,29 @@ ul {
     min-height: 700px;
     background: var(--color-dark);
     color: white;
-    /* background-image: url('placeholder-tattoo-artist.jpg'); */
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.65);
     display: flex;
     flex-direction: column;
 }
 
-/* NAV PRINCIPALE (barre noire) */
+/* NAV PRINCIPALE */
 .main-nav {
     background-color: var(--color-dark);
     border-bottom: 1px solid #222;
     color: #ffffff;
 }
 
-/* Barre interne */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 80px;
-    background-color: transparent; /* la couleur vient de .main-nav */
+    background-color: transparent;
 }
 
-/* Logo */
 .logo {
     font-family: var(--font-heading);
     font-size: 24px;
@@ -76,7 +72,6 @@ ul {
     color: #ffffff;
 }
 
-/* Conteneur des liens de nav (x-nav-link) */
 .nav-links {
     display: flex;
     gap: 30px;
@@ -85,7 +80,6 @@ ul {
     align-items: center;
 }
 
-/* Jetstream génère un <a> à l'intérieur de x-nav-link */
 .nav-links a {
     position: relative;
     font-family: var(--font-body);
@@ -96,7 +90,6 @@ ul {
     transition: color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Hover + actif (underline or + texte blanc) */
 .nav-links a:hover,
 .nav-links a.active,
 .nav-links a.border-indigo-400 {
@@ -104,13 +97,11 @@ ul {
     border-bottom-color: var(--color-accent);
 }
 
-/* Neutraliser les colors Tailwind par défaut */
 .nav-links a.text-gray-500,
 .nav-links a.text-gray-900 {
     color: var(--color-text);
 }
 
-/* Bouton hamburger */
 .hamburger-btn {
     color: var(--color-text);
     background-color: transparent;
@@ -122,7 +113,6 @@ ul {
     background-color: #222;
 }
 
-/* Menu mobile */
 .mobile-menu {
     background-color: var(--color-dark);
     color: #ffffff;
@@ -137,7 +127,6 @@ ul {
     align-items: center;
     text-align: center;
     padding-bottom: 150px;
-
 }
 
 .hero-content .welcome {
@@ -220,10 +209,9 @@ ul {
     color: var(--color-text);
 }
 
-/* --- SECTION Gallerie --- */
+/* --- SECTION GALERIE --- */
 .gallery-section {
     padding: 80px 0;
-    /* margin-top: -100px; */
 }
 
 .gallery-content {
@@ -239,6 +227,49 @@ ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+}
+
+/* ✅ VIGNETTES UNIFORMES AVEC TEXTE EN DESSOUS */
+.grid-img-placeholder {
+    width: 100%;
+    overflow: hidden;
+}
+
+.grid-img-placeholder a {
+    display: block;
+}
+
+.grid-img-placeholder figure {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-img-placeholder img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    display: block;
+    background-color: #f0f0f0;
+}
+
+.grid-img-placeholder legend {
+    background-color: var(--color-dark);
+    color: white;
+    padding: 10px 12px;
+    text-align: center;
+}
+
+.grid-img-placeholder legend h3 {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 2px;
+}
+
+.grid-img-placeholder legend p {
+    font-size: 12px;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* --- SECTION 3: ABOUT --- */
@@ -274,7 +305,6 @@ ul {
     align-items: flex-start;
 }
 
-/* Galerie (Desktop) */
 .about-gallery {
     flex: 1;
     display: grid;
@@ -283,7 +313,6 @@ ul {
     gap: 10px;
 }
 
-/* Placeholders d'images */
 .img-placeholder {
     background-color: #ccc;
     background-position: center;
@@ -292,7 +321,6 @@ ul {
     background-image: url('https://placehold.co/280x200?text=Image');
 }
 
-/* Mise en page de la grille pour le desktop */
 .img-placeholder:nth-child(1) {
     grid-column: span 2;
     grid-row: span 1;
@@ -315,7 +343,6 @@ ul {
     grid-row: 2 / 3;
 }
 
-/* Texte à droite */
 .about-text {
     flex: 1;
     padding-top: 10px;
@@ -349,133 +376,102 @@ ul {
     background-color: white;
     position: relative;
 }
+
 .artist-links {
     padding: 20px;
     margin-left: 10%;
     margin-right: 10%;
     background-color: white;
 }
+
 .artist-links ul {
     display: flex;
     gap: 20px;
 }
+
 /* ======================================= */
-/* 📱 MEDIA QUERIES (Responsive) */
+/* MEDIA QUERIES                           */
 /* ======================================= */
 
-/* --- TABLETTES ET PETITS ORDINATEURS (Max 1024px) --- */
 @media (max-width: 1280px) {
-
     .navbar {
         padding: 15px 20px;
         flex-direction: row;
         justify-content: space-between;
     }
-
     .nav-links {
-        display: none; /* prévu pour un futur menu burger */
+        display: none;
     }
 }
 
 @media (max-width: 1024px) {
-
-    /* --- HERO --- */
-    .navbar {
-        padding: 20px 40px;
-    }
-
-    /* .nav-links {
-        gap: 20px;
-        font-size: 12px;
-    } */
-
     .navbar {
         padding: 15px 20px;
         flex-direction: row;
         justify-content: space-between;
     }
-
     .nav-links {
-        display: none; /* prévu pour un futur menu burger */
+        display: none;
     }
-
     .hero-content h1 {
         font-size: 40px;
     }
-
-    /* --- FEATURES --- */
     .features-container {
         width: 90%;
         flex-wrap: wrap;
     }
-
     .feature-box {
         flex: 1 1 45%;
         padding: 30px 20px;
         border-right: none;
         margin-bottom: 20px;
     }
-
     .feature-box:nth-child(odd) {
-        border-right: 1px solid #333; /* 2 colonnes, bordure entre la colonne 1 et 2 */
+        border-right: 1px solid #333;
     }
-
     .feature-box:nth-child(3) {
         border-right: none;
     }
-
-    /* --- GALLERY SECTION --- */
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    /* --- ABOUT SECTION --- */
+    .grid-img-placeholder img {
+        height: 250px;
+    }
     .about-content {
         width: 90%;
-        flex-direction: column; /* Empile la galerie et le texte */
+        flex-direction: column;
         gap: 40px;
     }
-
     .about-gallery {
         max-width: 600px;
         margin: 0 auto;
     }
 }
 
-/* --- SMARTPHONES (Max 600px) --- */
 @media (max-width: 600px) {
-
-    /* --- HERO / NAV --- */
     .hero-section {
         min-height: 550px;
     }
-
     .hero-content h1 {
         font-size: 30px;
     }
-
     .hero-content .slogan {
         font-size: 14px;
         padding: 0 10px;
     }
-
     .btn-cta {
         padding: 10px 20px;
         font-size: 11px;
     }
-
-    /* --- FEATURES --- */
     .features-section {
         transform: translateY(-50px);
     }
-
-    /* Empile les boîtes en une seule colonne */
     .features-container {
         width: 90%;
         flex-direction: column;
         padding: 20px;
     }
-
     .feature-box {
         flex: 1 1 100%;
         border-right: none !important;
@@ -483,45 +479,37 @@ ul {
         padding: 20px 10px;
         margin-bottom: 0;
     }
-
     .feature-box:last-child {
         border-bottom: none;
     }
-
-    /* --- GALLERY SECTION --- */
     .gallery-grid {
         grid-template-columns: repeat(1, 1fr);
     }
-
-
-    /* --- ABOUT SECTION --- */
+    .grid-img-placeholder img {
+        height: 200px;
+    }
     .about-section {
         padding: 40px 0;
         margin-top: -30px;
     }
-
     .about-header h2 {
         font-size: 26px;
     }
-
-    /* Galerie en une seule colonne */
     .about-gallery {
         grid-template-columns: 1fr;
         gap: 5px;
     }
-
     .img-placeholder {
         grid-column: span 1 !important;
         grid-row: auto !important;
         min-height: 180px;
     }
-
     .signature {
         font-size: 28px;
     }
 }
 
-/* SECTION PRODUITS (clone de ABOUT) */
+/* SECTION PRODUITS */
 .products-section {
     padding: 80px 0;
     width: 80%;
@@ -539,7 +527,6 @@ ul {
     font-style: italic;
 }
 
-/* 🔥 GALERIE IDENTIQUE À ABOUT-GALLERY */
 .products-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -547,16 +534,14 @@ ul {
     gap: 10px;
 }
 
-/* Cases (placeholders visibles) */
 .product-placeholder {
     background-color: #ccc;
     background-size: cover;
     background-position: center;
     min-height: 100px;
-    border: 1px solid #999; /* pour que tu VOIS les cases */
+    border: 1px solid #999;
 }
 
-/* 🔥 Même mise en page que ABOUT */
 .product-placeholder:nth-child(1) {
     grid-column: span 2;
     min-height: 200px;
@@ -580,18 +565,17 @@ ul {
     min-height: 200px;
 }
 
-/* Responsive EXACTEMENT comme ABOUT */
 @media (max-width: 600px) {
     .products-gallery {
         grid-template-columns: 1fr;
     }
-
     .product-placeholder {
         grid-column: span 1 !important;
         grid-row: auto !important;
         min-height: 180px;
     }
 }
+
 /* ======================== */
 /*     CONTACT SECTION      */
 /* ======================== */
@@ -611,7 +595,6 @@ ul {
     align-items: flex-start;
 }
 
-/* COLONNE GAUCHE */
 .contact-left {
     width: 30%;
 }
@@ -630,6 +613,7 @@ ul {
     line-height: 1.6;
     margin-bottom: 40px;
 }
+
 .contact-socials {
     display: flex;
     align-items: center;
@@ -652,14 +636,19 @@ ul {
     margin-top: 40px;
 }
 
-/* BANDE JAUNE */
+/* Lien login discret sur le copyright */
+.admin-secret-link {
+    color: inherit;
+    text-decoration: none;
+    cursor: default;
+}
+
 .contact-divider {
     width: 120px;
     background-color: var(--color-accent);
     height: 100%;
 }
 
-/* COLONNE DROITE */
 .contact-right {
     width: 50%;
 }
@@ -695,27 +684,22 @@ ul {
     color: var(--color-dark);
 }
 
-/* RESPONSIVE */
 @media (max-width: 900px) {
     .contact-container {
         flex-direction: column;
         align-items: center;
     }
-
-    .contact-left, 
+    .contact-left,
     .contact-right {
         width: 90%;
         text-align: center;
     }
-
     .contact-divider {
         width: 100%;
         height: 80px;
         margin: 40px 0;
     }
-
     .contact-socials {
         justify-content: center;
     }
 }
-
