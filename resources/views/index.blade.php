@@ -4,115 +4,121 @@
         background-image: url('{{ asset('storage/bannieres/banniere_studio.jpg') }}');
         background-repeat: no-repeat;
         background-position: center center;
-        background-size: cover;   /* ← l'image remplit tout */
+        background-size: cover;
         width: 100%;
         height: 100%;
     }
-
     </style>
+
     <form action="{{ route('index.store') }}" method="POST">
         @csrf
-    <section class="features-section">
-        <x-primary-button class="ms-3">
-            {{ __('Enregistrer') }}
-        </x-primary-button>
-        <div class="features-container">
+
+        <section class="features-section">
             @auth
-                <div class="feature-box">
-                    <h3>Horaires</h3>
-                    <textarea rows="8" name="texte_Horaires">{{ $textes[0]['contenu'] }}</textarea>
-                </div>
-            @else
-                <div class="feature-box">
-                    <i class="fas fa-crown"></i>
-                    <h3>Horaires</h3>
-                    <p>{!! $textes[0]['contenu'] !!}</p>
-                </div>
+            <div style="text-align:center; margin-bottom: 10px;">
+                <x-primary-button class="ms-3">{{ __('Enregistrer') }}</x-primary-button>
+            </div>
             @endauth
+            <div class="features-container">
+                @auth
+                    <div class="feature-box">
+                        <h3>Horaires</h3>
+                        <textarea rows="8" name="texte_Horaires">{{ $textes[0]['contenu'] }}</textarea>
+                    </div>
+                @else
+                    <div class="feature-box">
+                        <i class="fas fa-crown"></i>
+                        <h3>Horaires</h3>
+                        <p>{!! $textes[0]['contenu'] !!}</p>
+                    </div>
+                @endauth
 
-            @auth
-                <div class="feature-box">
-                    <h3>Adresse</h3>
-                    <textarea rows="8" name="texte_Adresse">{{ $textes[1]['contenu'] }}</textarea>
-                </div>
-            @else
-                <div class="feature-box">
-                    <i class="fas fa-crown"></i>
-                    <h3>Adresse</h3>
-                    <p>{!! $textes[1]['contenu'] !!}</p>
-                </div>
-            @endauth
+                @auth
+                    <div class="feature-box">
+                        <h3>Adresse</h3>
+                        <textarea rows="8" name="texte_Adresse">{{ $textes[1]['contenu'] }}</textarea>
+                    </div>
+                @else
+                    <div class="feature-box">
+                        <i class="fas fa-crown"></i>
+                        <h3>Adresse</h3>
+                        <p>{!! $textes[1]['contenu'] !!}</p>
+                    </div>
+                @endauth
 
-            @auth
-                <div class="feature-box">
-                    <h3>Équipe Professionnelle</h3>
-                    <textarea rows="8" name="texte_Équipe Professionnelle">{{ $textes[2]['contenu'] }}</textarea>
-                </div>
-            @else
-                <div class="feature-box">
-                    <i class="fas fa-crown"></i>
-                    <h3>Équipe Professionnelle</h3>
-                    <p>{!! $textes[2]['contenu'] !!}</p>
-                </div>
-            @endauth            
-
-        </div>
-    </section>
-
-    <section class="gallery-section">
-        <div class="gallery-content">
-            <div class="gallery-grid">
-                @foreach ($artistes as $artiste)
-                <div class="grid-img-placeholder">
-                    <a href="{{ url('/artiste/' . $artiste->pseudo) }}">
-                        <figure>
-                            <img src="{{ asset('storage/vignettes/' . $artiste->vignetteUrl) }}" alt="{{ $artiste->pseudo }}">
-                            <legend>
-                                <h3>{{ $artiste->pseudo }}</h3>
-                                <p>{{ $artiste->profession }}</p>
-                            </legend>
-                        </figure>
-                    </a>
-                </div>
-                @endforeach
+                @auth
+                    <div class="feature-box">
+                        <h3>Équipe Professionnelle</h3>
+                        <textarea rows="8" name="texte_Équipe Professionnelle">{{ $textes[2]['contenu'] }}</textarea>
+                    </div>
+                @else
+                    <div class="feature-box">
+                        <i class="fas fa-crown"></i>
+                        <h3>Équipe Professionnelle</h3>
+                        <p>{!! $textes[2]['contenu'] !!}</p>
+                    </div>
+                @endauth
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="about-section">
-        <div class="about-header">
-            <p class="est-year">EST 1990</p>
-            <h2>We are Best Tattoo Studio <br> in Town</h2>
-        </div>
-
-        <div class="about-content">
-            <div class="about-gallery">
-                <div class="img-placeholder wide"><img src="{{ asset('storage/studio1.jpg') }}" alt="Studio 1" style="width: 100%; height: 100%; object-fit: cover;"></div>
-                <div class="img-placeholder tall"><img src="{{ asset('storage/studio2.jpg') }}" alt="Studio 2" style="width: 100%; height: 100%; object-fit: cover;"></div>
-                <div class="img-placeholder small"><img src="{{ asset('storage/studio3.jpg') }}" alt="Studio 3" style="width: 100%; height: 100%; object-fit: cover;"></div>
-                <div class="img-placeholder small"><img src="{{ asset('storage/studio4.jpg') }}" alt="Studio 4" style="width: 100%; height: 100%; object-fit: cover;"></div>
+        <section class="gallery-section">
+            <div class="gallery-content">
+                <div class="gallery-grid">
+                    @foreach ($artistes as $artiste)
+                    <div class="grid-img-placeholder">
+                        <a href="{{ url('/artiste/' . $artiste->pseudo) }}">
+                            <figure>
+                                <img src="{{ asset('storage/vignettes/' . $artiste->vignetteUrl) }}" alt="{{ $artiste->pseudo }}">
+                                <legend>
+                                    <h3>{{ $artiste->pseudo }}</h3>
+                                    <p>{{ $artiste->profession }}</p>
+                                </legend>
+                            </figure>
+                        </a>
+                    </div>
+                    @endforeach
+                </div>
             </div>
-            <div class="about-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>Cras semper auctor neque vitae tempus quam pellentesque, ipsum consectetur elit sit amet, leo. Tortor id aliquet lectus proin ut faucibus. Velit sed ullamcorper morbi tincidunt. Eu facilisis sed odio morbi quis commodo odio aenean sed.</p>
-                <p class="quote">Facilisis sed odio morbi quis commodo odio aenean sed. Adipiscing elit ut tellus elementum sagittis vitae et leo. Tempor id aliquet lectus proin ut faucibus. Velit sed ullamcorper morbi tincidunt. Eu facilisis sed odio morbi quis commodo odio aenean sed.</p>
-                <div class="signature">Martinez</div>
+        </section>
+
+        <section class="about-section">
+            <div class="about-header">
+                <p class="est-year">EST 1990</p>
+                <h2>We are Best Tattoo Studio <br> in Town</h2>
             </div>
-        </div>
-    </section>
 
-    <section class="products-section">
-        <div class="products-header">
-            <h2>Nos Produits</h2>
-        </div>
-        <div class="products-gallery">
-            <div class="product-placeholder" style="background-image: url('{{ asset('storage/produits/produit1.jpg') }}')"></div>
-            <div class="product-placeholder" style="background-image: url('{{ asset('storage/produits/produit2.jpg') }}')"></div>
-            <div class="product-placeholder" style="background-image: url('{{ asset('storage/produits/produit3.jpg') }}')"></div>
-            <div class="product-placeholder" style="background-image: url('{{ asset('storage/produits/produit4.jpg') }}')"></div>
-        </div>
-    </section>
+            <div class="about-content">
+                <div class="about-gallery">
+                    <div class="img-placeholder wide"><img src="{{ asset('storage/studio1.jpg') }}" alt="Studio 1" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="img-placeholder tall"><img src="{{ asset('storage/studio2.jpg') }}" alt="Studio 2" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="img-placeholder small"><img src="{{ asset('storage/studio3.jpg') }}" alt="Studio 3" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="img-placeholder small"><img src="{{ asset('storage/studio4.jpg') }}" alt="Studio 4" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                </div>
+                <div class="about-text">
+                    @auth
+                        <textarea rows="12" name="texte_Biographie Studio" style="width:100%; background:transparent; border:1px solid #444; font-size:15px; padding:8px; resize:vertical; font-family:inherit; color:#555;">{{ $textes[3]['contenu'] }}</textarea>
+                    @else
+                        <p>{!! $textes[3]['contenu'] !!}</p>
+                    @endauth
+                    <div class="signature">Martinez</div>
+                </div>
+            </div>
+        </section>
 
+        <section class="products-section">
+            <div class="products-header">
+                <h2>Nos Produits</h2>
+            </div>
+            <div class="products-gallery">
+                <div class="product-placeholder" style="background-image: url('{{ asset('storage/produits/produit1.jpg') }}')"></div>
+                <div class="product-placeholder" style="background-image: url('{{ asset('storage/produits/produit2.jpg') }}')"></div>
+                <div class="product-placeholder" style="background-image: url('{{ asset('storage/produits/produit3.jpg') }}')"></div>
+                <div class="product-placeholder" style="background-image: url('{{ asset('storage/produits/produit4.jpg') }}')"></div>
+            </div>
+        </section>
+
+    </form>
+    {{-- LE FORMULAIRE DE CONTACT EST EN DEHORS DU FORM PRINCIPAL --}}
     <section class="contact-section">
         <div class="contact-container">
 
@@ -132,8 +138,6 @@
 
                 <p class="contact-footer">
                     <a href="{{ route('login') }}" class="admin-secret-link">© 2025 Politique de confidentialité</a>
-                    <br>
-                    <a href="{{ route('login') }}">{{ __('Connexion administrateur') }}</a>
                 </p>
             </div>
 
@@ -149,12 +153,9 @@
                     <textarea placeholder="Enter your message"></textarea>
                     <button type="submit" class="contact-btn">Soumettre</button>
                 </form>
-
-
             </div>
 
         </div>
-
     </section>
-</form>
+
 </x-guest-layout>
