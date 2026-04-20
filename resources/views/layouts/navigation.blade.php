@@ -30,6 +30,16 @@
                         {{ $artiste->pseudo }}
                     </x-nav-link>
                 @endforeach
+                @auth
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <x-nav-link :href="route('logout')"
+                            onclick="event.preventDefault(); this.closest('form').submit();">
+                            {{ __('Log Out') }}
+                        </x-nav-link>
+                    </form>
+                @endauth
+
             </div>
         </div>
 
@@ -71,6 +81,10 @@
                     {{ $artiste->pseudo }}
                 </x-responsive-nav-link>
             @endforeach
+
+
+
+
         </div>
 
         <!-- Responsive Settings Options -->
