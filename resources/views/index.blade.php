@@ -107,6 +107,8 @@
 
                 <p class="contact-footer">
                     <a href="{{ route('login') }}" class="admin-secret-link">© 2025 Politique de confidentialité</a>
+                    <br>
+                    <a href="{{ route('login') }}">{{ __('Connexion administrateur') }}</a>
                 </p>
             </div>
 
@@ -122,9 +124,12 @@
                     <textarea placeholder="Enter your message"></textarea>
                     <button type="submit" class="contact-btn">Soumettre</button>
                 </form>
+
+
             </div>
 
         </div>
+
     </section>
 
 </x-guest-layout>

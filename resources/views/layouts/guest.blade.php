@@ -15,12 +15,8 @@
         @vite(['resources/css/app.css', 'resources/css/style.css', 'resources/js/app.js'])
     </head>
 
-
-
-
     <body class="font-sans text-gray-900 antialiased">
         @include('layouts.navigation')  
-
 
         <header class="hero-section">
 
@@ -34,5 +30,8 @@
     </header>
 
         {{ $slot }}
+
+
+
     </body>
 </html>
