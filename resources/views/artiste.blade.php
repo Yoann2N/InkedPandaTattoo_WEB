@@ -51,4 +51,53 @@
         </div>
     </section>
 
+    <section class="contact-section">
+        <div class="contact-container">
+
+            <!-- COLONNE GAUCHE -->
+            <div class="contact-left">
+
+                <h3 class="contact-title">EMPLACEMENT</h3>
+
+                <p class="contact-address">
+                    100 avenue de la petite marine<br>
+                    L'Isle-sur-la-Sorgue 84800
+                </p>
+
+                <h3 class="contact-title">SUIVEZ NOUS</h3>
+
+                <div class="contact-socials">
+                    <a href="http://facebook.com" target="_blank"><img style="width: 50px; height: 50px;" src="{{ asset('storage/reseaux/facebook.png') }}" alt="Facebook"></a>
+                    <!-- <a href="http://twitter.com" target="_blank"><img style="width: 50px; height: 50px;" src="{{ asset('storage/reseaux/twitter.png') }}" alt="Twitter"></a> -->
+                    <a href="http://instagram.com" target="_blank"><img style="width: 50px; height: 50px;" src="{{ asset('storage/reseaux/instagram.png') }}" alt="Instagram"></a>
+                    <!-- <a href="http://google.com" target="_blank"><img style="width: 50px; height: 50px;" src="{{ asset('storage/reseaux/google.png') }}" alt="Google"></a> -->
+                </div>
+
+                <p class="contact-footer">© 2026 Politique de confidentialité</p>
+                
+
+            </div>
+
+            <!-- COLONNE CENTRALE (BANDE JAUNE) -->
+            <div class="contact-divider"></div>
+
+            <!-- COLONNE DROITE (FORMULAIRE) -->
+            <div class="contact-right">
+
+                <h3 class="contact-title">FORMULAIRE DE CONTACT</h3>
+
+                <form class="contact-form">
+
+                    <input type="text" placeholder="Enter your Name">
+                    <input type="email" placeholder="Enter a valid email address">
+                    <textarea placeholder="Enter your message"></textarea>
+
+                    <button type="submit" class="contact-btn">Soumettre</button>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
 </x-guest-layout>

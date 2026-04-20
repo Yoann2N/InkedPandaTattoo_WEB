@@ -6,6 +6,7 @@ use App\Http\Controllers\IndexController;
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
 Route::get('/artiste/{pseudo}', [IndexController::class, 'artiste'])->name('artiste');
+Route::get('/visites-par-artistes', [IndexController::class, 'statistiques']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
