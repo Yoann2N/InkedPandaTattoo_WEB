@@ -7,13 +7,16 @@ use Illuminate\View\View;
 use Illuminate\Support\Facades\Cache;
 use App\Models\Artiste;
 use App\Models\Vue;
+use App\Models\Texte;
 
 class IndexController extends Controller
 {
     public function index(): View
     {
         $artistes = Artiste::all();
-        return view('index', compact('artistes'));
+        $textes = Texte::all();
+        
+        return view('index', compact('artistes', 'textes'));
     }
 
     public function artiste(string $pseudo): View

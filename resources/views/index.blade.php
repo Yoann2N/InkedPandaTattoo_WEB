@@ -13,30 +13,43 @@
         <div class="features-container">
             @auth
                 <div class="feature-box">
-                    <textarea></textarea>
+                    <h3>Horaires</h3>
+                    <textarea>{{ $textes[0]['contenu'] }}</textarea>
                 </div>
             @else
                 <div class="feature-box">
                     <i class="fas fa-crown"></i>
                     <h3>Horaires</h3>
-                    <p>Lundi : Fermé - Mardi : 10h00 - 19h00</p>
-                    <p>Mercredi : 10h00 - 19h00 - Jeudi : 10h00 - 19h00</p>
-                    <p>Vendredi : 10h00 - 19h00 - Samedi : 10h00 - 19h00</p>
-                    <p>Dimanche : Fermé</p>
+                    <p>{{ $textes[0]['contenu'] }}</p>
                 </div>
             @endauth
 
-            <div class="feature-box">
-                <i class="fas fa-syringe"></i>
-                <h3>Adresse</h3>
-                <p>100 avenue de la petite marine</p>
-                <p>84800, Isle sur la Sorgue</p>
-            </div>
-            <div class="feature-box">
-                <i class="fas fa-users"></i>
-                <h3>Équipe Professionnelle</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-            </div>
+            @auth
+                <div class="feature-box">
+                    <h3>Adresse</h3>
+                    <textarea>{{ $textes[1]['contenu'] }}</textarea>
+                </div>
+            @else
+                <div class="feature-box">
+                    <i class="fas fa-crown"></i>
+                    <h3>Adresse</h3>
+                    <p>{{ $textes[1]['contenu'] }}</p>
+                </div>
+            @endauth
+
+            @auth
+                <div class="feature-box">
+                    <h3>Équipe Professionnelle</h3>
+                    <textarea>{{ $textes[2]['contenu'] }}</textarea>
+                </div>
+            @else
+                <div class="feature-box">
+                    <i class="fas fa-crown"></i>
+                    <h3>Équipe Professionnelle</h3>
+                    <p>{{ $textes[2]['contenu'] }}</p>
+                </div>
+            @endauth            
+
         </div>
     </section>
 
