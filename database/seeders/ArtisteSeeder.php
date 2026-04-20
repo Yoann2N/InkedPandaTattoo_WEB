@@ -40,7 +40,7 @@ class ArtisteSeeder extends Seeder
 
                     'instagram' => 'https://www.instagram.com/sarahpendragon/',
                     'facebook' => '',
-                    'banniereUrl' => 'banniere_studio.jpg',
+                    'banniereUrl' => 'banniere_sarah.jpg',
                     'vignetteUrl' => 'logo_tatoo2.png',
                     'rss' => 'https://rss.app/embed/v1/imageboard/WvQISdq1zYHX8GlM',
                     'css' => 'body { background-color: #f0f0f0; }teal',
@@ -48,11 +48,11 @@ class ArtisteSeeder extends Seeder
                 ],
                 [
                     
-                    'profession'      => 'Maquillage permanent',
-                    'style'    => 'Maquillage permanent',
-                    'pseudo'        => 'Isabelle',
+                    'profession'      => 'Tatoueur',
+                    'style'    => 'Manga, Japonais',
+                    'pseudo'        => 'Tomsaw',
                     'bio'  => 'Isabelle Fontaine est une artiste spécialisée dans le maquillage permanent, née en 1985 à Nantes. Après une carrière de plusieurs années en tant que maquilleuse professionnelle pour le cinéma et la mode, elle découvre le maquillage permanent à l&apos;âge de 30 ans et y voit immédiatement une façon de sublimer la beauté de manière durable. Elle se forme auprès des meilleures écoles européennes, notamment à Paris et à Milan, avant d&apos;ouvrir son propre institut, **Belle Encre**, dans le centre de Nantes en 2017. Spécialisée dans la technique de la microblading pour les sourcils, l&apos;eye-liner permanent et le rehaussement des lèvres, elle est reconnue pour son souci du naturel et sa capacité à adapter chaque prestation au visage et à la personnalité de sa cliente. Son approche bienveillante et son sens du détail lui ont valu une clientèle fidèle et de nombreuses recommandations bouche-à-oreille. Isabelle se forme régulièrement aux nouvelles techniques et aux pigments les plus innovants afin de garantir des résultats durables et sûrs. Elle intervient également en tant que formatrice auprès de professionnels souhaitant se reconvertir dans le maquillage permanent, transmettant avec passion son savoir-faire et son exigence.',
-                    'instagram' => 'https://www.instagram.com/isabelle_studio_artist/',
+                    'instagram' => 'https://www.instagram.com/tomsaw.tattoo/?hl=fr',
                     'facebook' => '',
                     'banniereUrl' => 'banniere_studio.jpg',
                     'vignetteUrl' => 'logo_tatoo3.jpg',
@@ -76,11 +76,11 @@ class ArtisteSeeder extends Seeder
                 ],
                 [
                     
-                    'profession'      => 'Nailartiste',
-                    'style'    => '',
-                    'pseudo'        => 'Alma',
+                    'profession'      => 'Head spa',
+                    'style'    => 'Head Spa japonais & massage crânien',
+                    'pseudo'        => 'Capiluna',
                     'bio'  => 'Alma Reyes est une nail artiste née en 1995 à Toulouse, passionnée par l&apos;art et la mode depuis son plus jeune âge. Après des études en design graphique, elle découvre le nail art comme une extension naturelle de sa créativité et se forme auprès de professionnelles reconnues à Paris et à Londres. Elle ouvre son propre studio, **Alma Nails**, à Toulouse en 2020, proposant des créations sur mesure alliant techniques traditionnelles et innovations les plus récentes, telles que la pose en gel, l&apos;acrylique et les pigments effet miroir. Son univers esthétique, inspiré par la nature, l&apos;art contemporain et les cultures asiatiques, lui a permis de se forger une identité visuelle forte et immédiatement reconnaissable sur les réseaux sociaux, où elle compte plusieurs dizaines de milliers d&apos;abonnés. Alma est réputée pour sa minutie, sa capacité à transformer chaque ongle en une véritable œuvre d&apos;art et son souci constant de travailler avec des produits respectueux de la santé de ses clientes. Elle participe chaque année aux principales compétitions de nail art françaises et internationales, décrochant plusieurs podiums dans les catégories fantasy et nail art freestyle. En parallèle de son activité, elle propose des formations pour les professionnelles souhaitant perfectionner leur technique et développer leur propre style.',
-                    'instagram' => 'https://www.instagram.com/_alma_belleza_?igsh=MXZ6anJ6bHhsa29xcA%3D%3D&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnropG6IbFmiW5MVwueYSXCDNb8p85RwRV8rt5L1pDrbFgGf9-vuCRLgrZT9s_aem_TtZ3Tl9DUFJGJqTgpaKwxQ',
+                    'instagram' => 'https://www.instagram.com/maison.capiluna/?hl=fr',
                     'facebook' => '',
                     'banniereUrl' => 'banniere_studio.jpg',
                     'vignetteUrl' => 'logo_tatoo5.jpg',
