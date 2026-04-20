@@ -18,20 +18,18 @@
     <body class="font-sans text-gray-900 antialiased">
         @include('layouts.navigation')  
 
-        <header class="hero-section">
-
-
-        <div class="hero-content">
-            <!-- <p class="welcome">WELCOME TO</p>
-            <h1>Digital Tattoo Studio <br> From Melbourne</h1>
-            <p class="slogan">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper <br> mattis, pulvinar dapibus leo.</p>
-            <a href="#" class="btn-cta">MAKE AN APPOINTMENT</a> -->
-        </div>
-    </header>
+        @if (Route::currentRouteName() !== 'login')
+            <header class="hero-section">
+                <div class="hero-content">
+                    <!-- <p class="welcome">WELCOME TO</p>
+                    <h1>Digital Tattoo Studio <br> From Melbourne</h1>
+                    <p class="slogan">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper <br> mattis, pulvinar dapibus leo.</p>
+                    <a href="#" class="btn-cta">MAKE AN APPOINTMENT</a> -->
+                </div>
+            </header>
+        @endif
 
         {{ $slot }}
-
-
 
     </body>
 </html>
