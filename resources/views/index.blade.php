@@ -11,15 +11,21 @@
 
     <section class="features-section">
         <div class="features-container">
-            <div class="feature-box">
-                <i class="fas fa-crown"></i>
-                <h3>Horaires</h3>
-                <p>Lundi : Fermé - Mardi : 10h00 - 19h00</p>
-                <p>Mercredi : 10h00 - 19h00 - Jeudi : 10h00 - 19h00</p>
-                <p>Vendredi : 10h00 - 19h00 - Samedi : 10h00 - 19h00</p>
-                <p>Dimanche : Fermé</p>
+            @auth
+                <div class="feature-box">
+                    <textarea></textarea>
+                </div>
+            @else
+                <div class="feature-box">
+                    <i class="fas fa-crown"></i>
+                    <h3>Horaires</h3>
+                    <p>Lundi : Fermé - Mardi : 10h00 - 19h00</p>
+                    <p>Mercredi : 10h00 - 19h00 - Jeudi : 10h00 - 19h00</p>
+                    <p>Vendredi : 10h00 - 19h00 - Samedi : 10h00 - 19h00</p>
+                    <p>Dimanche : Fermé</p>
+                </div>
+            @endauth
 
-            </div>
             <div class="feature-box">
                 <i class="fas fa-syringe"></i>
                 <h3>Adresse</h3>
