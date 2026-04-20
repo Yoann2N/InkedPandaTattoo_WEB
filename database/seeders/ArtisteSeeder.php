@@ -42,7 +42,7 @@ class ArtisteSeeder extends Seeder
                     'facebook' => '',
                     'banniereUrl' => 'banniere_sarah.jpg',
                     'vignetteUrl' => 'logo_sarah.png',
-                    'rss' => 'https://rss.app/embed/v1/imageboard/WvQISdq1zYHX8GlM',
+                    'rss' => 'https://rss.app/embed/v1/wall/AOpj0IYvvxWjoour',
                     'css' => 'body { background-color: #f0f0f0; }teal',
                     'user_id' => 2
                 ],
