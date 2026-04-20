@@ -14,12 +14,17 @@
             <div class="feature-box">
                 <i class="fas fa-crown"></i>
                 <h3>Horaires</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                <p>Lundi : Fermé - Mardi : 10h00 - 19h00</p>
+                <p>Mercredi : 10h00 - 19h00 - Jeudi : 10h00 - 19h00</p>
+                <p>Vendredi : 10h00 - 19h00 - Samedi : 10h00 - 19h00</p>
+                <p>Dimanche : Fermé</p>
+
             </div>
             <div class="feature-box">
                 <i class="fas fa-syringe"></i>
                 <h3>Adresse</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                <p>100 avenue de la petite marine</p>
+                <p>84800, Isle sur la Sorgue</p>
             </div>
             <div class="feature-box">
                 <i class="fas fa-users"></i>
@@ -90,8 +95,8 @@
             <div class="contact-left">
                 <h3 class="contact-title">EMPLACEMENT</h3>
                 <p class="contact-address">
-                    28 Jackson Blvd Ste 1020 Chicago<br>
-                    IL 60604-2340
+                    100 avenue de la petite marine<br>
+                    84800, Isle sur la Sorgue
                 </p>
 
                 <h3 class="contact-title">SUIVEZ NOUS</h3>
