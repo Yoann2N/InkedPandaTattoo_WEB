@@ -41,7 +41,7 @@ class ArtisteSeeder extends Seeder
                     'instagram' => 'https://www.instagram.com/sarahpendragon/',
                     'facebook' => '',
                     'banniereUrl' => 'banniere_sarah.jpg',
-                    'vignetteUrl' => 'logo_tatoo2.png',
+                    'vignetteUrl' => 'logo_sarah.png',
                     'rss' => 'https://rss.app/embed/v1/imageboard/WvQISdq1zYHX8GlM',
                     'css' => 'body { background-color: #f0f0f0; }teal',
                     'user_id' => 2
@@ -69,7 +69,7 @@ class ArtisteSeeder extends Seeder
                     'instagram' => 'https://www.instagram.com/anatomix84?igsh=ejdjdDlyc3FxZDFs&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnpe-k51gRMjkwKjBfA2WDJfht_gDlJ_eHXCJGoyPvQURDAX_HiiCLV3ud7u8_aem_REPZ-0sNj1B0XlvMLYvqRg',
                     'facebook' => '',
                     'banniereUrl' => 'banniere_studio.jpg',
-                    'vignetteUrl' => 'logo_tatoo4.jpg',
+                    'vignetteUrl' => 'logo_anatomix.jpg',
                     'rss' => 'https://rss.app/embed/v1/imageboard/WvQISdq1zYHX8GlM',
                     'css' => 'body { background-color: #f0f0f0; }aqua',
                     'user_id' => 4
