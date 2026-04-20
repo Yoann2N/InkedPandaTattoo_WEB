@@ -18,12 +18,12 @@ class TexteSeeder extends Seeder
                 [
                     'titre'      => 'Horaires',
                     'slug'       => 'horaires',
-                    'contenu'    => 'Lundi : Fermé<br /> - Mardi : 10h00 - 19h00 Mercredi : 10h00 - 19h00 - Jeudi : 10h00 - 19h00 Vendredi : 10h00 - 19h00 - Samedi : 10h00 - 19h00 Dimanche : Fermé'
+                    'contenu'    => 'Lundi : Fermé<br />Mardi : 10h00 - 19h00<br />Mercredi : 10h00 - 19h00<br />Jeudi : 10h00 - 19h00<br />Vendredi : 10h00 - 19h00<br />Samedi : 10h00 - 19h00<br />Dimanche : Fermé'
                 ],
                 [
                     'titre'      => 'Adresse',
                     'slug'       => 'adresse',
-                    'contenu'    => '100 avenue de la petite marine 84800,<br /> Isle sur la Sorgue'
+                    'contenu'    => '100 avenue de la petite marine 84800,<br />Isle sur la Sorgue'
                 ],
                 [
                     'titre'      => 'Équipe Professionnelle',

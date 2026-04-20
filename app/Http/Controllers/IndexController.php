@@ -19,6 +19,25 @@ class IndexController extends Controller
         return view('index', compact('artistes', 'textes'));
     }
 
+    public function store(): View
+    {
+        // Enregistrement des textes modifiés (exemple avec les trois premiers textes)
+        $textes = Texte::all();
+        foreach ($textes as $texte) {
+            $inputName = 'texte_' . $texte->titre;
+            if (request()->has($inputName)) {
+                $texte->contenu = request()->input($inputName);
+                $texte->save();
+            }
+        }
+    
+    
+        $artistes = Artiste::all();
+        $textes = Texte::all();
+        
+        return view('index', compact('artistes', 'textes'));
+    }   
+
     public function artiste(string $pseudo): View
     {
         $artiste = Artiste::where('pseudo', $pseudo)->firstOrFail();

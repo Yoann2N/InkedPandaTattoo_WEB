@@ -4,49 +4,55 @@
         background-image: url('{{ asset('storage/bannieres/banniere_studio.jpg') }}');
         background-repeat: no-repeat;
         background-position: center center;
+        background-size: cover;   /* ← l'image remplit tout */
         width: 100%;
         height: 100%;
     }
-    </style>
 
+    </style>
+    <form action="{{ route('index.store') }}" method="POST">
+        @csrf
     <section class="features-section">
+        <x-primary-button class="ms-3">
+            {{ __('Enregistrer') }}
+        </x-primary-button>
         <div class="features-container">
             @auth
                 <div class="feature-box">
                     <h3>Horaires</h3>
-                    <textarea>{{ $textes[0]['contenu'] }}</textarea>
+                    <textarea rows="8" name="texte_Horaires">{{ $textes[0]['contenu'] }}</textarea>
                 </div>
             @else
                 <div class="feature-box">
                     <i class="fas fa-crown"></i>
                     <h3>Horaires</h3>
-                    <p>{{ $textes[0]['contenu'] }}</p>
+                    <p>{!! $textes[0]['contenu'] !!}</p>
                 </div>
             @endauth
 
             @auth
                 <div class="feature-box">
                     <h3>Adresse</h3>
-                    <textarea>{{ $textes[1]['contenu'] }}</textarea>
+                    <textarea rows="8" name="texte_Adresse">{{ $textes[1]['contenu'] }}</textarea>
                 </div>
             @else
                 <div class="feature-box">
                     <i class="fas fa-crown"></i>
                     <h3>Adresse</h3>
-                    <p>{{ $textes[1]['contenu'] }}</p>
+                    <p>{!! $textes[1]['contenu'] !!}</p>
                 </div>
             @endauth
 
             @auth
                 <div class="feature-box">
                     <h3>Équipe Professionnelle</h3>
-                    <textarea>{{ $textes[2]['contenu'] }}</textarea>
+                    <textarea rows="8" name="texte_Équipe Professionnelle">{{ $textes[2]['contenu'] }}</textarea>
                 </div>
             @else
                 <div class="feature-box">
                     <i class="fas fa-crown"></i>
                     <h3>Équipe Professionnelle</h3>
-                    <p>{{ $textes[2]['contenu'] }}</p>
+                    <p>{!! $textes[2]['contenu'] !!}</p>
                 </div>
             @endauth            
 
@@ -150,5 +156,5 @@
         </div>
 
     </section>
-
+</form>
 </x-guest-layout>

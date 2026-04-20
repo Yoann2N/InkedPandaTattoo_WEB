@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
+Route::post('/', [IndexController::class, 'store'])->name('index.store');
+
 Route::get('/artiste/{pseudo}', [IndexController::class, 'artiste'])->name('artiste');
 Route::get('/visites-par-artistes', [IndexController::class, 'statistiques']);
 
