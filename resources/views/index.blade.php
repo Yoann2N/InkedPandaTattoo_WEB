@@ -138,6 +138,8 @@
 
                 <p class="contact-footer">
                     <a href="{{ route('login') }}" class="admin-secret-link">© 2025 Politique de confidentialité</a>
+                     <br>
+                     <a href="{{ route('login') }}">{{ __('Connexion administrateur') }}</a>
                 </p>
             </div>
 
