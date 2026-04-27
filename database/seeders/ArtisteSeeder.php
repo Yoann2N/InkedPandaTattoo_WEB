@@ -82,8 +82,8 @@ class ArtisteSeeder extends Seeder
                     'bio'  => 'Alma Reyes est une nail artiste née en 1995 à Toulouse, passionnée par l&apos;art et la mode depuis son plus jeune âge. Après des études en design graphique, elle découvre le nail art comme une extension naturelle de sa créativité et se forme auprès de professionnelles reconnues à Paris et à Londres. Elle ouvre son propre studio, **Alma Nails**, à Toulouse en 2020, proposant des créations sur mesure alliant techniques traditionnelles et innovations les plus récentes, telles que la pose en gel, l&apos;acrylique et les pigments effet miroir. Son univers esthétique, inspiré par la nature, l&apos;art contemporain et les cultures asiatiques, lui a permis de se forger une identité visuelle forte et immédiatement reconnaissable sur les réseaux sociaux, où elle compte plusieurs dizaines de milliers d&apos;abonnés. Alma est réputée pour sa minutie, sa capacité à transformer chaque ongle en une véritable œuvre d&apos;art et son souci constant de travailler avec des produits respectueux de la santé de ses clientes. Elle participe chaque année aux principales compétitions de nail art françaises et internationales, décrochant plusieurs podiums dans les catégories fantasy et nail art freestyle. En parallèle de son activité, elle propose des formations pour les professionnelles souhaitant perfectionner leur technique et développer leur propre style.',
                     'instagram' => 'https://www.instagram.com/maison.capiluna/?hl=fr',
                     'facebook' => '',
-                    'banniereUrl' => 'banniere_studio.jpg',
-                    'vignetteUrl' => 'logo_tatoo5.jpg',
+                    'banniereUrl' => 'banniere_capiluna.jpg',
+                    'vignetteUrl' => 'logo_capiluna.jpg',
                     'rss' => 'https://rss.app/embed/v1/wall/oPdoLVUYk61yHmVV',
                     'css' => 'body { background-color: #f0f0f0; }aqua',
                     'user_id' => 5
