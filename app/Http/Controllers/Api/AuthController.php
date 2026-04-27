@@ -17,7 +17,7 @@ class AuthController extends Controller
 
         $user = user::where('email', $request->email)->first();
         if ($user) {
-            if ($user->is_admin){
+            // if ($user->is_admin){
                 if (password_verify($request->password, $user->password)) {
                     $token = $user->createToken('auth_token')->plainTextToken;
                     return response()->json([
@@ -27,9 +27,9 @@ class AuthController extends Controller
                 } else {
                     return response()->json(['message' => 'Identifiants invalides'], 401);
                 }
-            } else {
-                return response()->json(['message' => 'Identifiants invalides'], 401);
-            }
+            // } else {
+                // return response()->json(['message' => 'Identifiants invalides'], 401);
+            // }
             }else {
                 return response()->json(['message' => 'Identifiants invalides'], 401);
         }

@@ -100,7 +100,7 @@
                     @else
                         <p>{!! $textes[3]['contenu'] !!}</p>
                     @endauth
-                    <div class="signature">Martinez</div>
+                    <div class="signature">Alexis</div>
                 </div>
             </div>
         </section>
