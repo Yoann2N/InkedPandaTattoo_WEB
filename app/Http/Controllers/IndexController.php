@@ -21,7 +21,6 @@ class IndexController extends Controller
 
     public function store(): View
     {
-        // Enregistrement des textes modifiés (exemple avec les trois premiers textes)
         $textes = Texte::all();
         foreach ($textes as $texte) {
             $inputName = 'texte_' . $texte->titre;
@@ -30,13 +29,25 @@ class IndexController extends Controller
                 $texte->save();
             }
         }
-    
-    
+
         $artistes = Artiste::all();
         $textes = Texte::all();
         
         return view('index', compact('artistes', 'textes'));
-    }   
+    }
+
+    public function uploadImage(Request $request)
+    {
+        $request->validate([
+            'file' => 'required|image|max:2048'
+        ]);
+
+        $path = $request->file('file')->store('images', 'public');
+
+        return response()->json([
+            'location' => asset('storage/' . $path)
+        ]);
+    }
 
     public function artiste(string $pseudo): View
     {
@@ -46,7 +57,6 @@ class IndexController extends Controller
         $ip = request()->ip();
         $cacheKey = 'vue_artiste_' . $artiste->id . '_' . $ip;
 
-        // Si la clé n'existe pas dans le cache, on enregistre la vue
         if (!Cache::has($cacheKey)) {
             Vue::create([
                 'artiste_id' => $artiste->id,
@@ -54,10 +64,9 @@ class IndexController extends Controller
                 'created_at' => now(),
             ]);
 
-            // Bloque pendant 24h
             Cache::put($cacheKey, true, now()->addHours(24));
         }
 
-        return view('artiste', compact('artiste','artistes'));
+        return view('artiste', compact('artiste', 'artistes'));
     }
 }

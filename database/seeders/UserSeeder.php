@@ -46,13 +46,13 @@ class UserSeeder extends Seeder
                 ],
                 [
                    
-                    'name'      => 'Isabelle',
-                    'email'    => 'isabelle@gmail.com',
+                    'name'      => 'Tom',
+                    'email'    => 'tom@gmail.com',
                     
                     'password'  => '0000',
                    
                     
-                    'prenom' => 'Isabelle',
+                    'prenom' => 'Tom',
                     'adresse' => 'Isle sur la sorgue',
                     'code_postal' => '84800',
                     'ville' => 'Isle sur la sorgue',
@@ -73,12 +73,12 @@ class UserSeeder extends Seeder
                 ],
                 [
                     
-                    'name'      => 'Samantha',
-                    'email'    => 'Alma@gmail.com',
+                    'name'      => 'Lisa',
+                    'email'    => 'capiluna@gmail.com',
                     
                     'password'  => '0000',
                     
-                    'prenom' => 'Samantha',
+                    'prenom' => 'Lisa',
                     'adresse' => 'Isle sur la sorgue',
                     'code_postal' => '84800',
                     'ville' => 'Isle sur la sorgue',
