@@ -89,10 +89,10 @@
 
             <div class="about-content">
                 <div class="about-gallery">
-                    <div class="img-placeholder wide"><img src="{{ asset('storage/studio1.jpg') }}" alt="Studio 1" style="width: 100%; height: 100%; object-fit: cover;"></div>
-                    <div class="img-placeholder tall"><img src="{{ asset('storage/studio2.jpg') }}" alt="Studio 2" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="img-placeholder wide"><img src="{{ asset('storage/studio1.jpeg') }}" alt="Studio 1" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="img-placeholder tall"><img src="{{ asset('storage/studio2.jpeg') }}" alt="Studio 2" style="width: 100%; height: 100%; object-fit: cover;"></div>
                     <div class="img-placeholder small"><img src="{{ asset('storage/studio3.jpg') }}" alt="Studio 3" style="width: 100%; height: 100%; object-fit: cover;"></div>
-                    <div class="img-placeholder small"><img src="{{ asset('storage/studio4.jpg') }}" alt="Studio 4" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="img-placeholder small"><img src="{{ asset('storage/studio4.jpeg') }}" alt="Studio 4" style="width: 100%; height: 100%; object-fit: cover;"></div>
                 </div>
                 <div class="about-text">
                     @auth

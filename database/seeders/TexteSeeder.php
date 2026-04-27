@@ -33,7 +33,11 @@ class TexteSeeder extends Seeder
                 [
                     'titre'      => 'Biographie Studio',
                     'slug'       => 'biographie-studio',
-                    'contenu'    => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras semper auctor neque vitae tempus quam pellentesque, ipsum consectetur elit sit amet, leo. Tortor id aliquet lectus proin ut faucibus. Velit sed ullamcorper morbi tincidunt. Eu facilisis sed odio morbi quis commodo odio aenean sed. Facilisis sed odio morbi quis commodo odio aenean sed. Adipiscing elit ut tellus elementum sagittis vitae et leo. Tempor id aliquet lectus proin ut faucibus. Velit sed ullamcorper morbi tincidunt. Eu facilisis sed odio morbi quis commodo odio aenean sed.Martinez'
+                    'contenu'    => 'Le studio Inked Panda est bien plus qu’un simple salon : c’est un véritable cocon dédié à l’art et au bien-être. Pensé comme un lieu où chacun peut se sentir à l’aise, il réunit des talents complémentaires : tatoueurs passionnés, perceur expérimenté, praticienne head spa et prothésiste ongulaire, tous animés par la même envie de prendre soin de vous.
+
+Dans une ambiance chaleureuse et accueillante, chaque détail est pensé pour vous offrir un moment de détente et de confiance. Ici, le professionnalisme est au cœur de chaque prestation, avec une attention particulière portée à l’écoute et à l’accompagnement personnalisé.
+
+Que ce soit pour un tatouage, un piercing ou un moment de relaxation, l’équipe vous chouchoute et vous guide pour révéler votre personnalité à travers des prestations sur mesure. Inked Panda, c’est l’alliance parfaite entre créativité, expertise et bien-être.'
                 ]
             ];
 

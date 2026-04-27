@@ -41,7 +41,7 @@ class ArtisteSeeder extends Seeder
                     'instagram' => 'https://www.instagram.com/sarahpendragon/',
                     'facebook' => '',
                     'banniereUrl' => 'banniere_sarah.jpg',
-                    'vignetteUrl' => 'logo_sarah.png',
+                    'vignetteUrl' => 'logo_sarah.jpg',
                     'rss' => 'https://rss.app/embed/v1/wall/AOpj0IYvvxWjoour',
                     'css' => 'body { background-color: #f0f0f0; }teal',
                     'user_id' => 2
@@ -54,8 +54,8 @@ class ArtisteSeeder extends Seeder
                     'bio'  => 'Je m’appelle Tom, j’ai 28 ans et je tatoue dans le sud de la France, au studio Inked Panda. Je suis passionné par l’univers manga et la culture japonaise, qui influencent beaucoup mon travail, mais j’aime aussi explorer des styles plus graphiques et épurés. J’utilise surtout le noir, le gris, avec des touches de rouge pour créer des contrastes forts et donner du caractère à mes pièces. Ce que je préfère, c’est construire des projets avec les gens, prendre le temps de comprendre leurs idées et les adapter pour créer un tatouage qui leur correspond vraiment. Chaque pièce est pensée pour s’intégrer au corps et durer dans le temps. Mon objectif, c’est de faire des tatouages qui ont du sens, avec une vraie identité, autant pour la personne qui le porte que pour moi.',
                     'instagram' => 'https://www.instagram.com/tomsaw.tattoo/?hl=fr',
                     'facebook' => '',
-                    'banniereUrl' => 'banniere_studio.jpeg',
-                    'vignetteUrl' => 'logo_tatoo3.jpg',
+                    'banniereUrl' => 'banniere_tom.jpeg',
+                    'vignetteUrl' => 'logo_tom.jpg',
                     'rss' => 'https://rss.app/embed/v1/wall/JsKrzWQ1UZeuTd9N',
                     'css' => 'body { background-color: #f0f0f0; }aqua',
                     'user_id' => 3
