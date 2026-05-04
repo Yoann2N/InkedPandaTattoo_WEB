@@ -35,19 +35,89 @@ ul {
     list-style: none;
 }
 
-/* --- SECTION 1: HERO --- */
+/* ======================== */
+/* BANNIÈRE ACCUEIL (vidéo) */
+/* ======================== */
+
 .hero-section {
     position: relative;
+    width: 100%;
     height: 100vh;
-    min-height: 700px;
+    min-height: 400px;
+    max-height: 100vh;
+    overflow: hidden;
     background: var(--color-dark);
-    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-content {
+    flex-grow: 1;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 150px;
+}
+
+/* Overlay sombre sur la vidéo */
+.hero-section::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ======================== */
+/* BANNIÈRE PAGE ARTISTE    */
+/* ======================== */
+
+.hero-artiste {
+    height: 350px !important;
+    min-height: 200px !important;
+    max-height: 350px !important;
+}
+
+/* Cache la vidéo sur la page artiste */
+.hero-artiste .hero-video {
+    display: none;
+}
+
+/* La bannière artiste vient du hero-content via background-image dans artiste.blade.php */
+.hero-artiste .hero-content {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.65);
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .hero-section {
+        min-height: 250px;
+        max-height: 500px;
+    }
+    .hero-artiste {
+        height: 220px !important;
+        max-height: 220px !important;
+    }
 }
 
 /* NAV PRINCIPALE */
@@ -55,6 +125,8 @@ ul {
     background-color: var(--color-dark);
     border-bottom: 1px solid #222;
     color: #ffffff;
+    position: relative;
+    z-index: 10;
 }
 
 .navbar {
@@ -118,65 +190,12 @@ ul {
     color: #ffffff;
 }
 
-/* HERO CONTENT */
-.hero-content {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 150px;
-    width: 100%;
-    height: 100%;
-}
-
-.hero-content .welcome {
-    font-size: 14px;
-    letter-spacing: 2px;
-    color: var(--color-accent);
-    margin-bottom: 10px;
-}
-
-.hero-content h1 {
-    font-size: 55px;
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
-
-.hero-content .slogan {
-    font-size: 16px;
-    color: var(--color-text);
-    margin-bottom: 40px;
-}
-
-.btn-cta {
-    display: inline-block;
-    padding: 15px 35px;
-    background-color: var(--color-accent);
-    color: var(--color-dark);
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-size: 13px;
-    transition: background-color 0.3s;
-}
-
-.btn-cta:hover {
-    background-color: #c98807;
-}
-
-textarea {
-    color: var(--color-dark);
-    font-size: 13px;
-    resize: vertical;
-}
-
 /* --- SECTION 2: FEATURES --- */
 .features-section {
     width: 100%;
     transform: translateY(-50%);
     z-index: 10;
+    position: relative;
 }
 
 .features-container {
@@ -217,6 +236,17 @@ textarea {
     color: var(--color-text);
 }
 
+.feature-box textarea {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #444;
+    color: var(--color-text);
+    font-size: 14px;
+    padding: 8px;
+    resize: vertical;
+    font-family: var(--font-body);
+}
+
 /* --- SECTION GALERIE --- */
 .gallery-section {
     padding: 80px 0;
@@ -237,7 +267,7 @@ textarea {
     gap: 10px;
 }
 
-/* ✅ VIGNETTES UNIFORMES AVEC TEXTE EN DESSOUS */
+/* VIGNETTES UNIFORMES AVEC TEXTE EN DESSOUS */
 .grid-img-placeholder {
     width: 100%;
     overflow: hidden;
@@ -254,10 +284,9 @@ textarea {
 
 .grid-img-placeholder img {
     width: 100%;
-    /* height: 300px; */
-    object-fit: contain;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     display: block;
-    background-color: #f0f0f0;
 }
 
 .grid-img-placeholder legend {
@@ -326,29 +355,30 @@ textarea {
     background-position: center;
     background-size: cover;
     min-height: 100px;
-    background-image: url('https://placehold.co/280x200?text=Image');
 }
 
 .img-placeholder:nth-child(1) {
     grid-column: span 2;
     grid-row: span 1;
-    min-height: 200px;
+    min-height: 150px;
 }
 
 .img-placeholder:nth-child(2) {
     grid-column: 3 / 4;
     grid-row: 1 / 3;
-    min-height: 410px;
+    min-height: 250px;
 }
 
 .img-placeholder:nth-child(3) {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    min-height: 100px;
 }
 
 .img-placeholder:nth-child(4) {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    min-height: 100px;
 }
 
 .about-text {
@@ -378,7 +408,6 @@ textarea {
 
 .artist-bio {
     padding: 20px;
-    margin-top: -30px;
     margin-left: 10%;
     margin-right: 10%;
     background-color: white;
@@ -421,9 +450,6 @@ textarea {
     .nav-links {
         display: none;
     }
-    .hero-content h1 {
-        font-size: 40px;
-    }
     .features-container {
         width: 90%;
         flex-wrap: wrap;
@@ -443,9 +469,6 @@ textarea {
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    .grid-img-placeholder img {
-        height: 250px;
-    }
     .about-content {
         width: 90%;
         flex-direction: column;
@@ -458,22 +481,8 @@ textarea {
 }
 
 @media (max-width: 600px) {
-    .hero-section {
-        min-height: 550px;
-    }
-    .hero-content h1 {
-        font-size: 30px;
-    }
-    .hero-content .slogan {
-        font-size: 14px;
-        padding: 0 10px;
-    }
-    .btn-cta {
-        padding: 10px 20px;
-        font-size: 11px;
-    }
     .features-section {
-        transform: translateY(-50px);
+        transform: translateY(-30px);
     }
     .features-container {
         width: 90%;
@@ -493,9 +502,6 @@ textarea {
     .gallery-grid {
         grid-template-columns: repeat(1, 1fr);
     }
-    .grid-img-placeholder img {
-        height: 200px;
-    }
     .about-section {
         padding: 40px 0;
         margin-top: -30px;
@@ -510,7 +516,7 @@ textarea {
     .img-placeholder {
         grid-column: span 1 !important;
         grid-row: auto !important;
-        min-height: 180px;
+        min-height: 150px;
     }
     .signature {
         font-size: 28px;
@@ -644,7 +650,6 @@ textarea {
     margin-top: 40px;
 }
 
-/* Lien login discret sur le copyright */
 .admin-secret-link {
     color: inherit;
     text-decoration: none;
@@ -669,6 +674,7 @@ textarea {
     border: none;
     background-color: #eeeeee;
     font-size: 14px;
+    display: block;
 }
 
 .contact-form textarea {

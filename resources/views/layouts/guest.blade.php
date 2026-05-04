@@ -13,18 +13,41 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/css/style.css', 'resources/js/app.js'])
+
+        <!-- TinyMCE (uniquement pour l'admin) -->
+        @auth
+        <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+        <script>
+            tinymce.init({
+                selector: 'textarea',
+                language: 'fr_FR',
+                plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+                toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+                images_upload_url: '/upload-image',
+                automatic_uploads: true,
+                file_picker_types: 'image',
+                setup: function(editor) {
+                    editor.on('change', function() {
+                        editor.save();
+                    });
+                }
+            });
+        </script>
+        @endauth
     </head>
 
     <body class="font-sans text-gray-900 antialiased">
-        @include('layouts.navigation')  
+        @include('layouts.navigation')
 
         @if (Route::currentRouteName() !== 'login')
-            <header class="hero-section">
+            <header class="hero-section {{ Route::currentRouteName() === 'artiste' ? 'hero-artiste' : '' }}">
+                {{-- Vidéo de fond uniquement sur la page d'accueil --}}
+                @if (Route::currentRouteName() === 'index')
+                    <video class="hero-video" autoplay muted loop playsinline>
+                        <source src="{{ asset('storage/bannieres/banniere_studio_vid.mp4') }}" type="video/mp4">
+                    </video>
+                @endif
                 <div class="hero-content">
-                    <!-- <p class="welcome">WELCOME TO</p>
-                    <h1>Digital Tattoo Studio <br> From Melbourne</h1>
-                    <p class="slogan">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper <br> mattis, pulvinar dapibus leo.</p>
-                    <a href="#" class="btn-cta">MAKE AN APPOINTMENT</a> -->
                 </div>
             </header>
         @endif

@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <style>
+    <!-- <style>
     .hero-content {
         background-image: url('{{ asset('storage/bannieres/banniere_studio.jpg') }}');
         background-repeat: no-repeat;
@@ -8,7 +8,7 @@
         width: 100%;
         height: 100%;
     }
-    </style>
+    </style> -->
 
     <form action="{{ route('index.store') }}" method="POST">
         @csrf
