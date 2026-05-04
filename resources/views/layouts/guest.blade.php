@@ -39,16 +39,13 @@
     <body class="font-sans text-gray-900 antialiased">
         @include('layouts.navigation')
 
-        @if (Route::currentRouteName() !== 'login')
-            <header class="hero-section {{ Route::currentRouteName() === 'artiste' ? 'hero-artiste' : '' }}">
-                {{-- Vidéo de fond uniquement sur la page d'accueil --}}
-                @if (Route::currentRouteName() === 'index')
-                    <video class="hero-video" autoplay muted loop playsinline>
-                        <source src="{{ asset('storage/bannieres/banniere_studio_vid.mp4') }}" type="video/mp4">
-                    </video>
-                @endif
-                <div class="hero-content">
-                </div>
+        {{-- Header vidéo uniquement sur la page d'accueil --}}
+        @if (Route::currentRouteName() === 'index')
+            <header class="hero-section">
+                <video class="hero-video" autoplay muted loop playsinline>
+                    <source src="{{ asset('storage/bannieres/banniere_studio_vid.mp4') }}" type="video/mp4">
+                </video>
+                <div class="hero-content"></div>
             </header>
         @endif
 
