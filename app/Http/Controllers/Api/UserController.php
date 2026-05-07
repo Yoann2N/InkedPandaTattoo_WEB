@@ -22,23 +22,25 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        \Log::debug("create user ", ['data' => $request->all()]);
+        $user = User::create($request->all());
+        return response()->json($user, 201);
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
+
 
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
     {
-        //
+        \Log::debug("update user with id: $id", ['data' => $request->all()]);
+        $user = User::find($id);
+        if (!$user) {
+            return response()->json(['message' => 'User not found'], 404);
+        }
+        $user->update($request->all());
+        return response()->json($user);
     }
 
     /**
@@ -46,6 +48,12 @@ class UserController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        \Log::debug("delete user with id: $id");
+        $user = User::find($id);
+        if (!$user) {
+            return response()->json(['error' => 'User not found'], 404);
+        }
+        $user->delete();
+        return response()->json(['null, 204']);
     }
 }
