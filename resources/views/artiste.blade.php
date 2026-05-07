@@ -14,7 +14,7 @@
     </div>
 
     <div class="artist-bio">
-        <p>{{ $artiste->bio }}</p>
+        <textarea>{{ $artiste->bio }}</textarea>
     </div>
 
     <div class="artist-links">

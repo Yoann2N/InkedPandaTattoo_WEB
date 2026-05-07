@@ -26,7 +26,7 @@ class ArtisteSeeder extends Seeder
                     'instagram' => 'https://www.instagram.com/alexis.panda.tattooartist/',
                     'facebook' => 'https://www.facebook.com/84.TOTI',
                     'banniereUrl' => 'banniere_studio.jpg',
-                    'vignetteUrl' => 'logo_tatoo1.png',
+                    'vignetteUrl' => 'logo_alex.png',
                     'rss' => 'https://rss.app/embed/v1/wall/acckayZAFJUSUYuf',
                     'css' => 'body { background-color: #f0f0f0; }aqua',
                     'user_id' => 1
