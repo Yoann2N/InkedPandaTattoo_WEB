@@ -129,8 +129,8 @@
 
                 <h3 class="contact-title">SUIVEZ NOUS</h3>
                 <div class="contact-socials">
-                    <a href="http://facebook.com" target="_blank"><img style="width: 50px; height: 50px;" src="{{ asset('storage/reseaux/facebook.png') }}" alt="Facebook"></a>
-                    <a href="http://instagram.com" target="_blank"><img style="width: 50px; height: 50px;" src="{{ asset('storage/reseaux/instagram.png') }}" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/InkedPandatattoostudio" target="_blank"><img style="width: 50px; height: 50px;" src="{{ asset('storage/reseaux/facebook.png') }}" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/studio.inked.panda/" target="_blank"><img style="width: 50px; height: 50px;" src="{{ asset('storage/reseaux/instagram.png') }}" alt="Instagram"></a>
                 </div>
 
                 <p class="contact-footer">
