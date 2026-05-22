@@ -39,7 +39,8 @@ class UserController extends Controller
         if (!$user) {
             return response()->json(['message' => 'User not found'], 404);
         }
-        $user->update($request->all());
+        $data = $request->except(['password', 'id']); // on exclut password et id    
+        $user->update($data);
         return response()->json($user);
     }
 
