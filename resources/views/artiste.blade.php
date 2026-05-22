@@ -4,17 +4,23 @@
     <div class="artiste-banniere">
         @if ($artiste->banniereUrl)
             <img src="{{ asset('storage/bannieres/' . $artiste->banniereUrl) }}"
-                 alt="{{ $artiste->pseudo }}"
-                 style="width: 100%; height: auto; display: block;">
+                 alt="{{ $artiste->pseudo }}">
         @else
             <img src="https://placehold.co/2000x700?text=Banniere"
-                 alt="Banniere"
-                 style="width: 100%; height: auto; display: block;">
+                 alt="Banniere">
         @endif
     </div>
 
     <div class="artist-bio">
-        <textarea>{{ $artiste->bio }}</textarea>
+        @auth
+            <form method="POST" action="{{ route('artiste.update', $artiste->pseudo) }}">
+                @csrf
+                <textarea name="bio" rows="6" style="width:100%; background:transparent; border:1px solid #444; font-size:15px; padding:8px; resize:vertical; font-family:inherit; color:#555;">{{ $artiste->bio }}</textarea>
+                <button type="submit" style="margin-top: 10px; padding: 8px 20px; background: var(--color-accent); border: none; cursor: pointer; font-weight: bold;">Enregistrer</button>
+            </form>
+        @else
+            <p>{{ $artiste->bio }}</p>
+        @endauth
     </div>
 
     <div class="artist-links">

@@ -1,3 +1,4 @@
+/* v5 */
 /* Variables et Réinitialisation de base */
 :root {
     --color-dark: #111111;
@@ -89,9 +90,8 @@ ul {
 /* ======================== */
 
 .artiste-banniere {
-    width: 100vw;
+    width: 100%;
     display: block;
-    margin-left: calc(-1 * (100vw - 100%) / 2);
 }
 
 .artiste-banniere img {
@@ -104,10 +104,6 @@ ul {
     .hero-section {
         min-height: 250px;
         max-height: 500px;
-    }
-    .hero-artiste {
-        height: 220px !important;
-        max-height: 220px !important;
     }
 }
 
@@ -196,7 +192,7 @@ ul {
     justify-content: space-between;
     background-color: var(--color-dark);
     color: white;
-    padding: 30px;
+    padding: 12px 30px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -244,7 +240,7 @@ ul {
 }
 
 .gallery-content {
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
     display: flex;
     gap: 50px;
@@ -326,18 +322,19 @@ ul {
 }
 
 .about-content {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     gap: 50px;
     align-items: flex-start;
+    justify-content: center;
 }
 
 .about-gallery {
-    flex: 1;
+    flex: 0 0 36%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
+    grid-template-rows: 16vw 11vw;
     gap: 10px;
 }
 
@@ -345,38 +342,48 @@ ul {
     background-color: #ccc;
     background-position: center;
     background-size: cover;
-    min-height: 100px;
+    overflow: hidden;
+}
+
+.img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .img-placeholder:nth-child(1) {
     grid-column: span 2;
     grid-row: span 1;
-    min-height: 200px;
-    max-height: 280px;
 }
 
 .img-placeholder:nth-child(2) {
     grid-column: 3 / 4;
     grid-row: 1 / 3;
-    min-height: 350px;
-    max-height: 400px;
+    align-self: stretch;
+}
+
+.img-placeholder:nth-child(2) img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .img-placeholder:nth-child(3) {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    min-height: 150px;
 }
 
 .img-placeholder:nth-child(4) {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    min-height: 150px;
 }
 
 .about-text {
     flex: 1;
     padding-top: 10px;
+    max-width: 400px;
 }
 
 .about-text p {
@@ -401,10 +408,12 @@ ul {
 
 .artist-bio {
     padding: 20px;
+    margin-top: -30px;
     margin-left: 10%;
     margin-right: 10%;
     background-color: white;
     position: relative;
+    z-index: 10;
 }
 
 .artist-links {
@@ -504,12 +513,14 @@ ul {
     }
     .about-gallery {
         grid-template-columns: 1fr;
+        grid-template-rows: auto;
         gap: 5px;
     }
     .img-placeholder {
         grid-column: span 1 !important;
         grid-row: auto !important;
         min-height: 150px;
+        height: auto !important;
     }
     .signature {
         font-size: 28px;
@@ -519,7 +530,7 @@ ul {
 /* SECTION PRODUITS */
 .products-section {
     padding: 80px 0;
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
 }
 
@@ -551,25 +562,25 @@ ul {
 
 .product-placeholder:nth-child(1) {
     grid-column: span 2;
-    min-height: 200px;
+    min-height: 11vw;
 }
 
 .product-placeholder:nth-child(2) {
     grid-column: 3 / 4;
     grid-row: 1 / 3;
-    min-height: 410px;
+    min-height: 23vw;
 }
 
 .product-placeholder:nth-child(3) {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    min-height: 200px;
+    min-height: 11vw;
 }
 
 .product-placeholder:nth-child(4) {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    min-height: 200px;
+    min-height: 11vw;
 }
 
 @media (max-width: 600px) {

@@ -19,21 +19,18 @@ class IndexController extends Controller
         return view('index', compact('artistes', 'textes'));
     }
 
-    public function store(): View
+    public function store(Request $request)
     {
         $textes = Texte::all();
         foreach ($textes as $texte) {
-            $inputName = 'texte_' . $texte->titre;
-            if (request()->has($inputName)) {
-                $texte->contenu = request()->input($inputName);
+            $inputName = 'texte_' . $texte->slug;
+            if ($request->has($inputName)) {
+                $texte->contenu = $request->input($inputName);
                 $texte->save();
             }
         }
 
-        $artistes = Artiste::all();
-        $textes = Texte::all();
-        
-        return view('index', compact('artistes', 'textes'));
+        return redirect()->route('index');
     }
 
     public function uploadImage(Request $request)
@@ -68,5 +65,17 @@ class IndexController extends Controller
         }
 
         return view('artiste', compact('artiste', 'artistes'));
+    }
+
+    public function updateArtiste(Request $request, string $pseudo)
+    {
+        $artiste = Artiste::where('pseudo', $pseudo)->firstOrFail();
+
+        if ($request->has('bio')) {
+            $artiste->bio = $request->input('bio');
+            $artiste->save();
+        }
+
+        return redirect()->route('artiste', $pseudo);
     }
 }

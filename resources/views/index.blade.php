@@ -1,14 +1,4 @@
 <x-guest-layout>
-    <!-- <style>
-    .hero-content {
-        background-image: url('{{ asset('storage/bannieres/banniere_studio.jpg') }}');
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        width: 100%;
-        height: 100%;
-    }
-    </style> -->
 
     <form action="{{ route('index.store') }}" method="POST">
         @csrf
@@ -23,7 +13,7 @@
                 @auth
                     <div class="feature-box">
                         <h3>Horaires</h3>
-                        <textarea rows="8" name="texte_Horaires">{{ $textes[0]['contenu'] }}</textarea>
+                        <textarea rows="8" name="texte_horaires">{{ $textes[0]['contenu'] }}</textarea>
                     </div>
                 @else
                     <div class="feature-box">
@@ -36,7 +26,7 @@
                 @auth
                     <div class="feature-box">
                         <h3>Adresse</h3>
-                        <textarea rows="8" name="texte_Adresse">{{ $textes[1]['contenu'] }}</textarea>
+                        <textarea rows="8" name="texte_adresse">{{ $textes[1]['contenu'] }}</textarea>
                     </div>
                 @else
                     <div class="feature-box">
@@ -49,7 +39,7 @@
                 @auth
                     <div class="feature-box">
                         <h3>Équipe Professionnelle</h3>
-                        <textarea rows="8" name="texte_Équipe Professionnelle">{{ $textes[2]['contenu'] }}</textarea>
+                        <textarea rows="8" name="texte_equipe-professionelle">{{ $textes[2]['contenu'] }}</textarea>
                     </div>
                 @else
                     <div class="feature-box">
@@ -89,14 +79,22 @@
 
             <div class="about-content">
                 <div class="about-gallery">
-                    <div class="img-placeholder wide"><img src="{{ asset('storage/studio1.jpeg') }}" alt="Studio 1" style="width: 100%; height: 100%; object-fit: cover;"></div>
-                    <div class="img-placeholder tall"><img src="{{ asset('storage/studio2.jpeg') }}" alt="Studio 2" style="width: 100%; height: 100%; object-fit: cover;"></div>
-                    <div class="img-placeholder small"><img src="{{ asset('storage/studio3.jpg') }}" alt="Studio 3" style="width: 100%; height: 100%; object-fit: cover;"></div>
-                    <div class="img-placeholder small"><img src="{{ asset('storage/studio4.jpeg') }}" alt="Studio 4" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div class="img-placeholder wide">
+                        <img src="{{ asset('storage/studio1.jpeg') }}" alt="Studio 1">
+                    </div>
+                    <div class="img-placeholder tall">
+                        <img src="{{ asset('storage/studio2.jpeg') }}" alt="Studio 2">
+                    </div>
+                    <div class="img-placeholder small">
+                        <img src="{{ asset('storage/studio3.jpg') }}" alt="Studio 3">
+                    </div>
+                    <div class="img-placeholder small">
+                        <img src="{{ asset('storage/studio4.jpeg') }}" alt="Studio 4">
+                    </div>
                 </div>
                 <div class="about-text">
                     @auth
-                        <textarea rows="12" name="texte_Biographie Studio" style="width:100%; background:transparent; border:1px solid #444; font-size:15px; padding:8px; resize:vertical; font-family:inherit; color:#555;">{{ $textes[3]['contenu'] }}</textarea>
+                        <textarea rows="12" name="texte_biographie-studio" style="width:100%; background:transparent; border:1px solid #444; font-size:15px; padding:8px; resize:vertical; font-family:inherit; color:#555;">{{ $textes[3]['contenu'] }}</textarea>
                     @else
                         <p>{!! $textes[3]['contenu'] !!}</p>
                     @endauth
@@ -118,11 +116,10 @@
         </section>
 
     </form>
-    {{-- LE FORMULAIRE DE CONTACT EST EN DEHORS DU FORM PRINCIPAL --}}
+
     <section class="contact-section">
         <div class="contact-container">
 
-            <!-- COLONNE GAUCHE -->
             <div class="contact-left">
                 <h3 class="contact-title">EMPLACEMENT</h3>
                 <p class="contact-address">
@@ -138,15 +135,13 @@
 
                 <p class="contact-footer">
                     <a href="{{ route('login') }}" class="admin-secret-link">© 2025 Politique de confidentialité</a>
-                     <br>
-                     <a href="{{ route('login') }}">{{ __('Connexion administrateur') }}</a>
+                    <br>
+                    <a href="{{ route('login') }}">{{ __('Connexion administrateur') }}</a>
                 </p>
             </div>
 
-            <!-- COLONNE CENTRALE (BANDE JAUNE) -->
             <div class="contact-divider"></div>
 
-            <!-- COLONNE DROITE (FORMULAIRE) -->
             <div class="contact-right">
                 <h3 class="contact-title">FORMULAIRE DE CONTACT</h3>
                 <form class="contact-form">

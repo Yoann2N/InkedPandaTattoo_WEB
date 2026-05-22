@@ -16,7 +16,7 @@
 
         <!-- TinyMCE (uniquement pour l'admin) -->
         @auth
-        <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+        <script src="https://cdn.tiny.cloud/1/nxiatmhno3qtulu2cx05vg5noyhgl7aqjzvja08vpdh60nzl/tinymce/8/tinymce.min.js" referrerpolicy="origin" crossorigin="anonymous"></script>
         <script>
             tinymce.init({
                 selector: 'textarea',
@@ -50,6 +50,5 @@
         @endif
 
         {{ $slot }}
-
     </body>
 </html>
