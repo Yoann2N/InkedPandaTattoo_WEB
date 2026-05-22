@@ -28,7 +28,7 @@ class TexteSeeder extends Seeder
                 [
                     'titre'      => 'Équipe Professionnelle',
                     'slug'       => 'equipe-professionnelle',
-                    'contenu'    => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.'
+                    'contenu'    => ''
                 ],
                 [
                     'titre'      => 'Biographie Studio',
