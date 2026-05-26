@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\NewsletterController;
+
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
 Route::post('/', [IndexController::class, 'store'])->name('index.store');
@@ -22,3 +24,12 @@ Route::middleware('auth')->group(function () {
 Route::post('/upload-image', [IndexController::class, 'uploadImage'])->middleware('auth');
 
 require __DIR__.'/auth.php';
+
+Route::post('/newsletter', [NewsletterController::class, 'store'])->name('newsletter.store');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/fichiers-clients', [NewsletterController::class, 'index'])->name('newsletter.index');
+    Route::delete('/fichiers-clients/{id}', [NewsletterController::class, 'destroy'])->name('newsletter.destroy');
+});
+
+Route::post('/contact', [IndexController::class, 'contact'])->name('contact');

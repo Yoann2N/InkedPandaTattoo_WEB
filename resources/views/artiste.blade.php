@@ -70,10 +70,17 @@
 
             <div class="contact-right">
                 <h3 class="contact-title">FORMULAIRE DE CONTACT</h3>
-                <form class="contact-form">
-                    <input type="text" placeholder="Enter your Name">
-                    <input type="email" placeholder="Enter a valid email address">
-                    <textarea placeholder="Enter your message"></textarea>
+
+                @if(session('contact_success'))
+                    <p style="color:green; margin-bottom:10px;">{{ session('contact_success') }}</p>
+                @endif
+
+                <form class="contact-form" action="{{ route('contact') }}" method="POST">
+                    @csrf
+                    <input type="hidden" name="destinataire" value="{{ $artiste->user->email }}">
+                    <input type="text" name="nom" placeholder="Votre nom" required value="{{ old('nom') }}">
+                    <input type="email" name="email" placeholder="Votre adresse email" required value="{{ old('email') }}">
+                    <textarea name="message" placeholder="Votre message" required>{{ old('message') }}</textarea>
                     <button type="submit" class="contact-btn">Soumettre</button>
                 </form>
             </div>

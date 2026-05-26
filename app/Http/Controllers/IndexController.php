@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Mail;
 use App\Models\Artiste;
 use App\Models\Vue;
 use App\Models\Texte;
+use App\Mail\ContactMail;
 
 class IndexController extends Controller
 {
@@ -31,6 +33,25 @@ class IndexController extends Controller
         }
 
         return redirect()->route('index');
+    }
+
+    public function contact(Request $request)
+    {
+        $request->validate([
+            'nom'     => 'required|string|max:255',
+            'email'   => 'required|email',
+            'message' => 'required|string',
+        ]);
+
+        $destinataire = $request->input('destinataire', config('mail.from.address'));
+
+        Mail::to($destinataire)->send(new ContactMail(
+            $request->nom,
+            $request->email,
+            $request->message
+        ));
+
+        return back()->with('contact_success', 'Votre message a bien été envoyé !');
     }
 
     public function uploadImage(Request $request)

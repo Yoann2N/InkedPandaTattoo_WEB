@@ -1,5 +1,4 @@
 @php
-    
     $artistes = \App\Models\Artiste::limit(6)->get();
 @endphp
 
@@ -30,7 +29,12 @@
                         {{ $artiste->pseudo }}
                     </x-nav-link>
                 @endforeach
+
                 @auth
+                    <x-nav-link :href="route('newsletter.index')" :active="request()->routeIs('newsletter.index')">
+                        {{ __('Fichiers clients') }}
+                    </x-nav-link>
+
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <x-nav-link :href="route('logout')"
@@ -39,7 +43,6 @@
                         </x-nav-link>
                     </form>
                 @endauth
-
             </div>
         </div>
 
@@ -82,8 +85,11 @@
                 </x-responsive-nav-link>
             @endforeach
 
-
-
+            @auth
+                <x-responsive-nav-link :href="route('newsletter.index')" :active="request()->routeIs('newsletter.index')">
+                    {{ __('Fichiers clients') }}
+                </x-responsive-nav-link>
+            @endauth
 
         </div>
 
@@ -91,7 +97,7 @@
         <div class="pt-4 pb-1 border-t border-gray-700">
             <div class="px-4">
                 <div class="font-medium text-base text-gray-100">
-                    @auth  {{ Auth::user()->name }} @endauth
+                    @auth {{ Auth::user()->name }} @endauth
                 </div>
                 <div class="font-medium text-sm text-gray-400">
                     @auth {{ Auth::user()->email }} @endauth

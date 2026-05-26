@@ -133,8 +133,14 @@
                     <a href="https://www.instagram.com/studio.inked.panda/" target="_blank"><img style="width: 50px; height: 50px;" src="{{ asset('storage/reseaux/instagram.png') }}" alt="Instagram"></a>
                 </div>
 
+                <div style="margin-top: 20px;">
+                    <button onclick="document.getElementById('newsletterModal').style.display='flex'" class="contact-btn">
+                        S'abonner à la newsletter
+                    </button>
+                </div>
+
                 <p class="contact-footer">
-                    <a href="{{ route('login') }}" class="admin-secret-link">© 2025 Politique de confidentialité</a>
+                    <a href="{{ route('login') }}" class="admin-secret-link">© 2026 Politique de confidentialité</a>
                     <br>
                     <a href="{{ route('login') }}">{{ __('Connexion administrateur') }}</a>
                 </p>
@@ -144,15 +150,24 @@
 
             <div class="contact-right">
                 <h3 class="contact-title">FORMULAIRE DE CONTACT</h3>
-                <form class="contact-form">
-                    <input type="text" placeholder="Enter your Name">
-                    <input type="email" placeholder="Enter a valid email address">
-                    <textarea placeholder="Enter your message"></textarea>
+
+                @if(session('contact_success'))
+                    <p style="color:green; margin-bottom:10px;">{{ session('contact_success') }}</p>
+                @endif
+
+                <form class="contact-form" action="{{ route('contact') }}" method="POST">
+                    @csrf
+                    <input type="hidden" name="destinataire" value="{{ config('mail.from.address') }}">
+                    <input type="text" name="nom" placeholder="Votre nom" required value="{{ old('nom') }}">
+                    <input type="email" name="email" placeholder="Votre adresse email" required value="{{ old('email') }}">
+                    <textarea name="message" placeholder="Votre message" required>{{ old('message') }}</textarea>
                     <button type="submit" class="contact-btn">Soumettre</button>
                 </form>
             </div>
 
         </div>
     </section>
+
+    <x-newsletter />
 
 </x-guest-layout>
